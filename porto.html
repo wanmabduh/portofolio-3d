@@ -1,0 +1,1231 @@
+v<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Wan Muhammad Abduh | 3D Artist & Animator Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Three.js CDN (Digunakan untuk efek partikel 3D di footer) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Font Inter & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#090514',      /* Deep Cosmic Purple-Black */
+                        cardBg: '#130d26',      /* Neon Card Background */
+                        cardBorder: '#2d1b4e',  /* Glowing Purple Border */
+                        neonCyan: '#06b6d4',
+                        neonPink: '#ec4899',
+                        neonPurple: '#8b5cf6'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090514;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d1b4e;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(236, 72, 153, 0.5);
+        }
+        .glow-card {
+            box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+        }
+        .glow-card:hover {
+            box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.4);
+            border-color: rgba(236, 72, 153, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-white font-sans antialiased selection:bg-pink-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-darkBg/80 backdrop-blur-xl border-b border-purple-900/40">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl md:text-2xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 animate-pulse"></span>
+                Wan Muhammad Abduh
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#home" class="text-white hover:text-pink-400 transition-colors">Home</a>
+                <a href="#projects" class="text-zinc-300 hover:text-white transition-colors">Portfolio</a>
+                <a href="#gallery" class="text-zinc-300 hover:text-white transition-colors">Gallery</a>
+                <a href="#awards" class="text-zinc-300 hover:text-white transition-colors">Awards</a>
+                <a href="#education" class="text-zinc-300 hover:text-white transition-colors">Education</a>
+                <a href="#experience" class="text-zinc-300 hover:text-white transition-colors">Experience</a>
+                <a href="#about" class="text-zinc-300 hover:text-white transition-colors">About</a>
+                <a href="#contact" class="text-zinc-300 hover:text-white transition-colors">Contact</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-zinc-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-purple-900 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-white font-medium py-1">Home</a>
+            <a href="#projects" class="block text-zinc-300 py-1">Portfolio</a>
+            <a href="#gallery" class="block text-zinc-300 py-1">Gallery</a>
+            <a href="#awards" class="block text-zinc-300 py-1">Awards</a>
+            <a href="#education" class="block text-zinc-300 py-1">Education</a>
+            <a href="#experience" class="block text-zinc-300 py-1">Experience</a>
+            <a href="#about" class="block text-zinc-300 py-1">About</a>
+            <a href="#contact" class="block text-zinc-300 py-1">Contact</a>
+        </div>
+    </header>
+
+    <main class="mt-20">
+        
+        <!-- HERO SECTION -->
+        <section id="home" class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-darkBg">
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <video autoplay muted loop playsinline class="w-full h-full object-cover filter brightness-90">
+                    <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/quicktime">
+                    <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video ini.
+                </video>
+                <div class="absolute inset-0 bg-darkBg/40"></div>
+            </div>
+
+            <div class="absolute inset-0 bg-radial from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-6 py-20">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider text-pink-300 bg-pink-500/10 border border-pink-500/30 uppercase backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-pink-400 animate-ping"></span> 3D Generalist & Animator Showcase
+                </div>
+                <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight text-white leading-tight glow-text">
+                    Bringing Imagination <br>into <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-400">3D Reality</span>
+                </h1>
+                <p class="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto font-medium drop-shadow-md">
+                    Inovasi Media Pembelajaran 3D Interaktif & Animasi SIBI berstandar industri dengan Blender.
+                </p>
+                <div class="pt-4 flex flex-wrap justify-center gap-4">
+                    <a href="#projects"
+                        class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-bold hover:opacity-90 transition-all shadow-lg shadow-pink-600/30">
+                        Jelajahi Karya <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/3s_x6oa49S8')"
+                        class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-cardBg/90 text-purple-300 border border-purple-500/40 font-bold hover:bg-purple-950/60 transition-all backdrop-blur-md">
+                        <i class="fa-solid fa-play text-pink-400"></i> Watch Cinematic Reel
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+            <div class="text-center mb-16 space-y-3">
+                <span class="text-xs font-semibold text-pink-400 uppercase tracking-wider">Featured Projects</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white">Project Showcase</h2>
+                <p class="text-zinc-400 max-w-xl mx-auto text-sm md:text-base">Eksplorasi animasi 3D, pemodelan interaktif Sketchfab, dan video showcase pilihan berstandar tinggi.</p>
+            </div>
+
+            <div class="space-y-10">
+                
+                <!-- ITEM 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
+                    <div class="md:col-span-5 space-y-4">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-pink-400 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">3D Animation / Character</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white">Promosi Prodi Animasi</h3>
+                        <p class="text-sm font-medium text-purple-300">Animated Hero for Video Profile</p>
+                        <p class="text-sm text-zinc-300 leading-relaxed">
+                            Proyek eksplorasi animasi karakter 3D lengkap dari tahapan concept art, sculpting high-poly di ZBrush, hingga rigging dan rendering menggunakan Blender Cycles.
+                        </p>
+                        <div class="pt-2">
+                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/3s_x6oa49S8')"
+                                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white font-semibold text-xs transition-all shadow-lg shadow-pink-600/30">
+                                <i class="fa-solid fa-play"></i> Watch Cinematic
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 relative group rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl">
+                        <img src="https://img.youtube.com/vi/3s_x6oa49S8/maxresdefault.jpg"
+                            alt="Video Thumbnail"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
+                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/3s_x6oa49S8')"
+                                class="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center text-xl shadow-xl hover:scale-110 hover:bg-pink-500 hover:text-white transition-all">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-zinc-300 bg-black/80 backdrop-blur-md px-3 py-2 rounded-xl border border-purple-900">
+                            <span><i class="fa-regular fa-clock mr-1 text-pink-400"></i> 02:45 Min</span>
+                            <span class="text-cyan-400 font-semibold">Cinematic Reel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl order-2 md:order-1">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/quicktime">
+                            <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video ini.
+                        </video>
+                        <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
+                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> SIBI Animation Project
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 space-y-4 order-1 md:order-2">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 uppercase tracking-wider">Final Project Animation</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white">Animasi Bahasa Isyarat SIBI</h3>
+                        <p class="text-sm font-medium text-purple-300">Media Pembelajaran SLB</p>
+                        <p class="text-sm text-zinc-300 leading-relaxed">
+                            Video peragaan animasi 3D pembelajaran bahasa isyarat berstandar SIBI sebagai media edukasi interaktif bagi anak tunarungu wicara.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 2.5: Slider 3 Video Live (Video Ketiga diperbarui dengan video yang Anda select) -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
+                    <div class="md:col-span-5 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30 uppercase tracking-wider">Live Video Slider</span>
+                                <span id="live-video-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Slide 1 / 3</span>
+                            </div>
+                            <h3 id="live-video-title" class="text-2xl md:text-3xl font-bold text-white">Kebakaran Hutan</h3>
+                            <p id="live-video-category" class="text-xs font-semibold text-cyan-400">Simulasi & Edukasi Animasi 3D</p>
+                            <p id="live-video-desc" class="text-zinc-300 text-sm leading-relaxed">
+                                Video animasi edukasi studi kasus kebakaran hutan dan mitigasinya sebagai media pembelajaran interaktif.
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 pt-4 border-t border-purple-900/60">
+                            <div class="flex items-center justify-between">
+                                <button onclick="navigateLiveVideo(-1)" 
+                                    class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
+                                    <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
+                                </button>
+                                <span id="live-video-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 3</span>
+                                <button onclick="navigateLiveVideo(1)" 
+                                    class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
+                                    Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl">
+                        <video id="live-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source id="live-video-source" src="foto/portofoliovideo/kasuskebakaranhutan.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video ini.
+                        </video>
+                        <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live Video Slide
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3: 3D Model Viewer (Sketchfab) -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl order-2 md:order-1">
+                        <iframe id="sketchfab-frame"
+                                title="Interactive 3D Model" 
+                                class="w-full h-full rounded-xl"
+                                src="https://sketchfab.com/3d-models/291fb7cd3bea4d379323dae507c0c339/embed" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking">
+                        </iframe>
+                    </div>
+
+                    <div class="md:col-span-5 flex flex-col justify-between space-y-6 order-1 md:order-2">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 uppercase tracking-wider">Interactive 3D Gallery</span>
+                                <span id="model-count-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">2 Model</span>
+                            </div>
+                            <h3 id="sketchfab-title" class="text-2xl md:text-3xl font-bold text-white">Stylized Weapon</h3>
+                            <p id="sketchfab-category" class="text-xs font-semibold text-cyan-400">Weapon & Hard-Surface Model</p>
+                            <p id="sketchfab-desc" class="text-zinc-300 text-sm leading-relaxed">
+                                Model 3D interaktif senjata stylized siap pakai untuk aset animasi dan game. Anda dapat menggeser, memutar, dan melakukan zoom secara langsung.
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 pt-4 border-t border-purple-900/60">
+                            <label for="sketchfabSelect" class="block text-xs font-semibold text-purple-300 uppercase tracking-wider">
+                                <i class="fa-solid fa-cubes text-pink-400 mr-1.5"></i> Pilih Aset 3D dari Katalog:
+                            </label>
+                            
+                            <div class="relative">
+                                <select id="sketchfabSelect" onchange="onSketchfabSelectChange(this.value)"
+                                    class="w-full px-4 py-3 bg-purple-950/40 border border-purple-800 rounded-xl text-white text-xs md:text-sm font-medium focus:outline-none focus:border-pink-500 transition-colors appearance-none cursor-pointer">
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-purple-300">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between pt-2">
+                                <button onclick="navigateSketchfab(-1)" 
+                                    class="px-3.5 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
+                                    <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
+                                </button>
+                                <span id="sketchfab-index-indicator" class="text-xs text-zinc-300 font-mono">1 / 2</span>
+                                <button onclick="navigateSketchfab(1)" 
+                                    class="px-3.5 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
+                                    Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2.6: CERITA NANO (Diperbarui dengan 2 video dari folder ceritanano) -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center bg-gradient-to-br from-[#130d26] via-[#1a0f35] to-[#0d071c] border border-pink-500/40 rounded-2xl p-4 md:p-6 glow-card transition-all">
+                    <div class="md:col-span-5 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold text-pink-300 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">Cerita Nano Series</span>
+                                <span id="series-video-badge" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Ep 1 / 2</span>
+                            </div>
+                            <h3 id="series-video-title" class="text-lg md:text-xl font-bold text-white">Cerita Nano Final</h3>
+                            <p id="series-video-category" class="text-[11px] font-semibold text-pink-400">Podcast Animasi 3D</p>
+                            <p id="series-video-desc" class="text-zinc-300 text-xs leading-relaxed">
+                                Seri dialog interaktif 3D podcast Cerita Nano.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 pt-2 border-t border-purple-900/50">
+                            <div class="flex items-center justify-between">
+                                <button onclick="navigateSeriesVideo(-1)" 
+                                    class="px-2.5 py-1 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-lg text-[10px] font-semibold flex items-center gap-1 transition-all">
+                                    <i class="fa-solid fa-arrow-left text-[8px]"></i> Prev
+                                </button>
+                                <span id="series-video-indicator" class="text-[11px] text-zinc-300 font-mono font-bold">Ep 1 dari 2</span>
+                                <button onclick="navigateSeriesVideo(1)" 
+                                    class="px-2.5 py-1 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-lg text-[10px] font-semibold flex items-center gap-1 transition-all">
+                                    Next <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 relative rounded-xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-lg max-w-lg mx-auto w-full">
+                        <video id="series-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source id="series-video-source" src="foto/portofoliovideo/ceritanano/Final.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video ini.
+                        </video>
+                        <div class="absolute bottom-2 right-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-semibold text-white border border-purple-900 flex items-center gap-1 pointer-events-none">
+                            <span class="w-1.5 h-1.5 rounded-full bg-pink-500 animate-pulse"></span> Cerita Nano
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VISUAL GALLERY SECTION -->
+        <section id="gallery" class="py-20 bg-black/60 border-t border-b border-purple-900/40 space-y-16">
+            <div class="max-w-7xl mx-auto px-6 space-y-4 text-center">
+                <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Visual Gallery</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Galeri Portofolio Aset 3D</h2>
+                <p class="text-zinc-400 text-sm max-w-xl mx-auto">Koleksi tangkapan layar render aset pemodelan 3D yang dikelompokkan ke dalam kategori objek tunggal dan adegan latar.</p>
+            </div>
+
+            <!-- KELOMPOK 1 -->
+            <div class="max-w-7xl mx-auto px-6 space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-purple-900/60 pb-4 gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-pink-500"></span>
+                        <h3 class="text-xl font-bold text-white">Kategori 1: Objek 3D Tanpa Background</h3>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3">
+                        <span class="text-xs font-semibold text-purple-300 bg-purple-950/60 border border-purple-800 px-3 py-1 rounded-full">Studio Lighting Render</span>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="slideGallery('gallerySlider1', 'left')" class="w-10 h-10 rounded-xl bg-cardBg border border-purple-900 text-purple-300 flex items-center justify-center hover:bg-pink-600 hover:text-white hover:border-pink-500 transition-all shadow-md">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="slideGallery('gallerySlider1', 'right')" class="w-10 h-10 rounded-xl bg-cardBg border border-purple-900 text-purple-300 flex items-center justify-center hover:bg-pink-600 hover:text-white hover:border-pink-500 transition-all shadow-md">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallerySlider1" class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-4">
+                    <!-- Bank -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Bank.png" alt="Bank 3D Model" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Bank 3D Model</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Aset environment arsitektur.</p>
+                        </div>
+                    </div>
+
+                    <!-- Camera Vintage -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Camera Vintage.png" alt="Camera Vintage" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Camera Vintage</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Prop hard-surface detail.</p>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Scooter -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Delivery scooter.png" alt="Delivery Scooter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Delivery Scooter</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Kendaraan objek 3D.</p>
+                        </div>
+                    </div>
+
+                    <!-- Earth Diorama -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Earth.png" alt="Earth Diorama" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Earth Diorama</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Stylized world model.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hatching Chick -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Hatching Chick.png" alt="Hatching Chick" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Hatching Chick</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Karakter & prop lucu.</p>
+                        </div>
+                    </div>
+
+                    <!-- Lemon Pie -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Lemon Pie.png" alt="Lemon Pie" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Lemon Pie</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Makanan & tekstur PBR.</p>
+                        </div>
+                    </div>
+
+                    <!-- Music Player -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Music Player.png" alt="Music Player" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Music Player</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Aset audio retro.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sheep Character -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Sheep.png" alt="Sheep Character" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Sheep Character</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Model hewan stylized.</p>
+                        </div>
+                    </div>
+
+                    <!-- Taco Prop -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Taco.png" alt="Taco Prop" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Taco Prop</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Aset makanan prop.</p>
+                        </div>
+                    </div>
+
+                    <!-- Vas Seladon Goryeo -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
+                            <img src="foto/portofoliofoto/Vas Seladon Goryeo.png" alt="Vas Seladon Goryeo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Vas Seladon Goryeo</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Artefak keramik klasik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KELOMPOK 2 (Ditambahkan Rasa Leluhur di Dapur Gadang) -->
+            <div class="max-w-7xl mx-auto px-6 space-y-6 pt-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-purple-900/60 pb-4 gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-cyan-400"></span>
+                        <h3 class="text-xl font-bold text-white">Kategori 2: Aset dengan Background (Scene Showcase)</h3>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3">
+                        <span class="text-xs font-semibold text-cyan-300 bg-cyan-950/60 border border-cyan-800 px-3 py-1 rounded-full">Environment Render</span>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="slideGallery('gallerySlider2', 'left')" class="w-10 h-10 rounded-xl bg-cardBg border border-purple-900 text-purple-300 flex items-center justify-center hover:bg-pink-600 hover:text-white hover:border-pink-500 transition-all shadow-md">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="slideGallery('gallerySlider2', 'right')" class="w-10 h-10 rounded-xl bg-cardBg border border-purple-900 text-purple-300 flex items-center justify-center hover:bg-pink-600 hover:text-white hover:border-pink-500 transition-all shadow-md">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallerySlider2" class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-4">
+                    <!-- Rasa Leluhur di Dapur Gadang (Baru ditambahkan) -->
+                    <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="foto/portofoliofoto/RasaLeluhurDiDapurGadang.png" alt="Rasa Leluhur di Dapur Gadang" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-5 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Rasa Leluhur di Dapur Gadang</h4>
+                            <p class="text-xs text-zinc-400 truncate">Scene kuliner tradisional Minang peraih Juara Favorit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Stylized Weapon Showcase -->
+                    <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="foto/portofoliofoto/weapon.png" alt="Stylized Weapon" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-5 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Stylized Weapon Showcase</h4>
+                            <p class="text-xs text-zinc-400 truncate">Aset senjata hard-surface dengan latar pameran.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pisau -->
+                    <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="foto/portofoliofoto/Pisau.png" alt="Pisau 3D Model" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-5 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Pisau Showcase</h4>
+                            <p class="text-xs text-zinc-400 truncate">Pemodelan prop pisau tactical dengan latar studio.</p>
+                        </div>
+                    </div>
+
+                    <!-- Telephone -->
+                    <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="foto/portofoliofoto/Telephone.png" alt="Telephone Vintage" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-5 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Telephone Vintage</h4>
+                            <p class="text-xs text-zinc-400 truncate">Aset telepon klasik merah dengan background render.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hidran -->
+                    <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="foto/portofoliofoto/Hidran.png" alt="Hidran Air" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-5 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Hidran Pemadam Fire</h4>
+                            <p class="text-xs text-zinc-400 truncate">Aset street prop hidran merah dengan studio background.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mousee -->
+                    <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="foto/portofoliofoto/Mousee.png" alt="Gaming Mouse" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-5 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Gaming Mouse</h4>
+                            <p class="text-xs text-zinc-400 truncate">Pemodelan aksesoris komputer hard-surface detail.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWARDS & CERTIFICATES SECTION -->
+        <section id="awards" class="py-20 bg-darkBg">
+            <div class="max-w-7xl mx-auto px-6 space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-xs font-semibold text-pink-400 uppercase tracking-wider">Achievements & Awards</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Sertifikat Lomba & Penghargaan</h2>
+                    <p class="text-zinc-400 text-sm">Dokumentasi sertifikat magang industri dan kemenangan kompetisi animasi dan game tingkat nasional.</p>
+                </div>
+
+                <!-- SLIDER SERTIFIKAT -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all max-w-5xl mx-auto">
+                    <div class="md:col-span-5 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-pink-300 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">Official Certificate</span>
+                                <span id="cert-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Sertifikat 1 / 3</span>
+                            </div>
+                            <h3 id="cert-title" class="text-2xl md:text-3xl font-bold text-white">IniDia Studio</h3>
+                            <p id="cert-category" class="text-xs font-semibold text-cyan-400">Certificate of Internship Completion</p>
+                            <p id="cert-desc" class="text-zinc-300 text-sm leading-relaxed">
+                                Sertifikat resmi kelulusan program magang sebagai 3D Modeler di IniDia Studio (PT Inidia Visual Cakrawala).
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 pt-4 border-t border-purple-900/60">
+                            <div class="flex items-center justify-between">
+                                <button onclick="navigateCertificate(-1)" 
+                                    class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
+                                    <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
+                                </button>
+                                <span id="cert-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 3</span>
+                                <button onclick="navigateCertificate(1)" 
+                                    class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
+                                    Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl group cursor-pointer" onclick="openImageModal(currentCertImageSrc)">
+                        <img id="cert-image" src="foto/ser/inidia.jpg" alt="Sertifikat Magang IniDia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                            <span class="text-xs font-semibold text-white bg-black/80 px-4 py-2 rounded-xl border border-purple-800 shadow-xl">Klik untuk Perbesar Gambar</span>
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Sertifikat Resmi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="py-20">
+            <div class="max-w-7xl mx-auto px-6 space-y-10">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-xs font-semibold text-pink-400 uppercase tracking-wider">Academic Background</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Riwayat Pendidikan</h2>
+                    <p class="text-zinc-400 text-sm">Latar belakang pendidikan formal di bidang Multimedia dan Teknologi Informasi.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Politeknik Caltex Riau -->
+                    <div class="bg-cardBg border border-purple-900/50 rounded-3xl p-8 glow-card flex flex-col justify-between space-y-4 transition-all">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3.5 py-1 bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-semibold rounded-full">Perguruan Tinggi</span>
+                                <i class="fa-solid fa-graduation-cap text-purple-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Politeknik Caltex Riau</h3>
+                            <p class="text-sm font-medium text-cyan-400">Teknik Informatika</p>
+                            <p class="text-xs text-zinc-300 leading-relaxed">
+                                Fokus pada pengembangan perangkat lunak, logika pemrograman, serta integrasi teknologi informasi dan media digital.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SMK Negeri 7 Pekanbaru -->
+                    <div class="bg-cardBg border border-purple-900/50 rounded-3xl p-8 glow-card flex flex-col justify-between space-y-4 transition-all">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3.5 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold rounded-full">Sekolah Menengah Kejuruan</span>
+                                <i class="fa-solid fa-school text-purple-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">SMK Negeri 7 Pekanbaru</h3>
+                            <p class="text-sm font-medium text-purple-300">Multimedia</p>
+                            <p class="text-xs text-zinc-300 leading-relaxed">
+                                Pondasi dasar keahlian desain grafis, animasi, editing video, dan produksi media audiovisual.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE / INTERNSHIP SECTION -->
+        <section id="experience" class="py-20 bg-black/60 border-t border-purple-900/40">
+            <div class="max-w-7xl mx-auto px-6 space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Professional Journey</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white">Pengalaman Magang</h2>
+                    <p class="text-zinc-400 text-sm">Pengalaman industri profesional dalam produksi aset 3D, environment, dan prop design pipeline.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Internship 1: IniDia Studio -->
+                    <div class="bg-cardBg border border-purple-900/50 rounded-3xl p-8 glow-card flex flex-col justify-between space-y-6 transition-all">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-14 h-14 rounded-2xl bg-zinc-950 border border-purple-900 flex items-center justify-center overflow-hidden p-1.5">
+                                        <img src="foto/Logo/inidia.png" alt="IniDia Studio Logo" class="w-full h-full object-contain rounded-xl">
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">IniDia Studio</h3>
+                                        <p class="text-xs text-pink-400 font-medium">Denpasar, Bali</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-semibold rounded-full">4 Bulan</span>
+                            </div>
+
+                            <p class="text-sm text-purple-200 font-medium">3D Environment & Prop Modeler Intern</p>
+                            <p class="text-sm text-zinc-300 leading-relaxed">
+                                Melakukan pemodelan objek 3D sebanyak 20 aset per minggu dengan tema berbeda, memproduksi visual iklan digital untuk produk kosmetik, serta melakukan revisi model sesuai standar industri.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <p class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Dokumentasi / Sertifikat Magang</p>
+                            <div class="w-full h-48 rounded-2xl overflow-hidden border border-purple-900/60 bg-zinc-950 relative group cursor-pointer" onclick="openImageModal('foto/ser/inidia.jpg')">
+                                <img src="foto/ser/inidia.jpg" 
+                                    alt="Sertifikat IniDia Studio" 
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-semibold text-white bg-black/80 px-3.5 py-2 rounded-xl border border-purple-800">Klik untuk Perbesar Sertifikat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Internship 2: Manimonki Studio -->
+                    <div class="bg-cardBg border border-purple-900/50 rounded-3xl p-8 glow-card flex flex-col justify-between space-y-6 transition-all">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-14 h-14 rounded-2xl bg-zinc-950 border border-purple-900 flex items-center justify-center overflow-hidden p-1.5">
+                                        <img src="foto/Logo/mainimonki.jpg" alt="Manimonki Studio Logo" class="w-full h-full object-cover rounded-xl">
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">Manimonki Studio</h3>
+                                        <p class="text-xs text-pink-400 font-medium">Solo, Jawa Tengah</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-semibold rounded-full">6 Bulan</span>
+                            </div>
+
+                            <p class="text-sm text-purple-200 font-medium">3D Environment & Prop Design Pipeline</p>
+                            <p class="text-sm text-zinc-300 leading-relaxed">
+                                Terlibat langsung dalam pipeline produksi environment dan prop design, mengoptimalkan aset 3D hard-surface dan procedural texturing untuk kebutuhan proyek animasi profesional.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <p class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Dokumentasi / Sertifikat Magang</p>
+                            <div class="w-full h-48 rounded-2xl border border-purple-900/60 bg-zinc-950/80 flex flex-col items-center justify-center p-6 text-center space-y-2">
+                                <i class="fa-solid fa-file-circle-exclamation text-pink-400 text-2xl"></i>
+                                <p class="text-xs font-semibold text-zinc-300">Sertifikat Magang Belum Tersedia</p>
+                                <p class="text-[11px] text-zinc-500">Dokumentasi akan diperbarui segera setelah dirilis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="bg-darkBg py-20">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-3xl blur-xl opacity-30"></div>
+                    <img src="foto/profil/IMG_0106.JPG"
+                        alt="Wan Muhammad Abduh"
+                        class="relative rounded-3xl border border-purple-900 shadow-2xl w-full aspect-square object-cover">
+                </div>
+                <div class="md:col-span-7 space-y-6">
+                    <span class="text-xs font-semibold text-pink-400 uppercase tracking-wider">Tentang Saya</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white">Halo, Saya Wan Muhammad Abduh</h2>
+                    <p class="text-zinc-300 leading-relaxed text-base">
+                        Seorang <strong class="text-pink-400">3D Generalist & Animator</strong> yang berfokus pada pembuatan karakter sinematik, lingkungan 3D, dan pemodelan *hard-surface*. Berpengalaman menggunakan Blender, ZBrush, dan Adobe Substance Painter dalam menyelesaikan berbagai proyek standar industri.
+                    </p>
+                    <div class="grid grid-cols-2 gap-5 pt-2">
+                        <div class="bg-cardBg p-5 rounded-2xl border border-purple-900/60 glow-card">
+                            <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">10 Bulan</p>
+                            <p class="text-xs text-zinc-400 mt-1">Total Pengalaman Magang</p>
+                        </div>
+                        <div class="bg-cardBg p-5 rounded-2xl border border-purple-900/60 glow-card">
+                            <p class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Blender & 3D</p>
+                            <p class="text-xs text-zinc-400 mt-1">Primary Pipeline</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+            <div class="bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/60 border border-purple-500/40 rounded-3xl p-8 md:p-14 text-center max-w-3xl mx-auto space-y-6 glow-card">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Mari Bekerja Sama!</h2>
+                <p class="text-zinc-300 text-sm md:text-base">
+                    Tertarik untuk berkolaborasi dalam proyek animasi, pembuatan model 3D, atau aset game? Kirimkan pesan Anda.
+                </p>
+
+                <!-- FORM CONTACT WEB3FORMS -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 max-w-md mx-auto text-left">
+                    
+                    <!-- Access Key Web3Forms Anda -->
+                    <input type="hidden" name="access_key" value="527ea74e-9090-4b42-9140-26c588823215">
+                    
+                    <!-- Subjek otomatis yang akan muncul di inbox email Anda -->
+                    <input type="hidden" name="subject" value="Pesan Baru dari Portofolio Web 3D">
+
+                    <div>
+                        <input type="text" name="name" placeholder="Nama Anda" required
+                            class="w-full px-5 py-3.5 bg-purple-950/40 border border-purple-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-pink-500 text-sm transition-colors">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Email Anda" required
+                            class="w-full px-5 py-3.5 bg-purple-950/40 border border-purple-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-pink-500 text-sm transition-colors">
+                    </div>
+                    <div>
+                        <textarea rows="4" name="message" placeholder="Pesan atau detail proyek..." required
+                            class="w-full px-5 py-3.5 bg-purple-950/40 border border-purple-800 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-pink-500 text-sm transition-colors"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-4 bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white font-bold rounded-xl transition-all shadow-lg shadow-pink-600/30 text-sm">
+                        Kirim Pesan <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative bg-darkBg border-t border-purple-900/40 py-12 overflow-hidden">
+        <div id="three-footer-canvas" class="absolute inset-0 z-0 opacity-40 pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+            <p>&copy; 2026 Wan Muhammad Abduh. All rights reserved.</p>
+            <div class="flex items-center space-x-6 text-purple-300">
+                <a href="https://www.artstation.com/wanabduh3d" target="_blank" title="ArtStation" class="hover:text-pink-400 transition-colors"><i class="fa-brands fa-artstation text-lg"></i></a>
+                <a href="https://instagram.com/yumesostudio" target="_blank" title="Instagram @yumesostudio" class="hover:text-pink-400 transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/wan-muhammad-abduh-7160bb361/?isSelfProfile=true" target="_blank" title="LinkedIn" class="hover:text-pink-400 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL CONTAINER -->
+    <div id="videoModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative w-full max-w-4xl bg-cardBg rounded-3xl overflow-hidden shadow-2xl border border-purple-900">
+            <button onclick="closeModal('videoModal')" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/80 text-white flex items-center justify-center hover:bg-pink-600 transition-colors">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            <div id="modalContentWrapper" class="aspect-video w-full flex items-center justify-center bg-black">
+                <iframe id="modalIframe" class="w-full h-full hidden" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img id="modalImage" class="max-h-[85vh] max-w-full object-contain hidden" src="" alt="Zoomed Certificate">
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT SCRIPTS -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            initThreeJsFooter('three-footer-canvas');
+            initSketchfabGallery();
+            initLiveVideoSlider();
+            initSeriesVideoSlider();
+            initCertificateSlider();
+        });
+
+        function initThreeJsFooter(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 200;
+            const posArray = new Float32Array(particlesCount * 3);
+
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 80;
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.8,
+                color: 0xec4899,
+                transparent: true,
+                opacity: 0.7
+            });
+
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+
+            camera.position.z = 30;
+
+            function animateFooter() {
+                requestAnimationFrame(animateFooter);
+                particlesMesh.rotation.y += 0.002;
+                particlesMesh.rotation.x += 0.001;
+                renderer.render(scene, camera);
+            }
+            animateFooter();
+
+            window.addEventListener('resize', () => {
+                if (!container) return;
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+            });
+        }
+
+        const certificateData = [
+            {
+                id: 1,
+                title: "IniDia Studio",
+                category: "Certificate of Internship Completion",
+                src: "foto/ser/inidia.jpg",
+                description: "Sertifikat resmi kelulusan program magang sebagai 3D Modeler di IniDia Studio (PT Inidia Visual Cakrawala)."
+            },
+            {
+                id: 2,
+                title: "Battle Field of Devata (BFOD) 2026",
+                category: "Favorite Artwork Winner",
+                src: "foto/ser/202609141438222255301193_dok_transkripaktifitas_page-0001.jpg",
+                description: "Penghargaan sebagai Favorite Artwork Winner dalam ajang kompetisi Battle Field of Devata (BFOD) melalui pemungutan suara publik dan apresiasi komunitas."
+            },
+            {
+                id: 3,
+                title: "Padang International Animation & Game Expo (PIAGEX) 2026",
+                category: "Favorite Winner - " + '"Rasa Leluhur di Dapur Gadang"',
+                src: "foto/ser/202609141445042255301193_dok_transkripaktifitas_page-0001.jpg",
+                description: "Penghargaan Juara Favorit (Favorite Winner) dari Online Submission dalam ajang Padang International Animation and Game Expo (PIAGEX) 2026."
+            }
+        ];
+
+        let currentCertIndex = 0;
+        let currentCertImageSrc = "";
+
+        function initCertificateSlider() {
+            loadCertificate(0);
+        }
+
+        function loadCertificate(index) {
+            if (index < 0 || index >= certificateData.length) return;
+            
+            currentCertIndex = index;
+            const data = certificateData[index];
+            currentCertImageSrc = data.src;
+
+            const imgEl = document.getElementById('cert-image');
+            const titleEl = document.getElementById('cert-title');
+            const catEl = document.getElementById('cert-category');
+            const descEl = document.getElementById('cert-desc');
+            const badgeEl = document.getElementById('cert-badge');
+            const indicatorEl = document.getElementById('cert-indicator');
+
+            if (imgEl) imgEl.src = data.src;
+            if (titleEl) titleEl.innerText = data.title;
+            if (catEl) catEl.innerText = data.category;
+            if (descEl) descEl.innerText = data.description;
+            if (badgeEl) badgeEl.innerText = `Sertifikat ${index + 1} / ${certificateData.length}`;
+            if (indicatorEl) indicatorEl.innerText = `${index + 1} dari ${certificateData.length}`;
+        }
+
+        function navigateCertificate(direction) {
+            let newIndex = currentCertIndex + direction;
+            if (newIndex < 0) {
+                newIndex = certificateData.length - 1;
+            } else if (newIndex >= certificateData.length) {
+                newIndex = 0;
+            }
+            loadCertificate(newIndex);
+        }
+
+        // Live Video Slider Ketiga diubah menggunakan video yang Anda select
+        const liveVideoData = [
+            {
+                id: 1,
+                title: "Kebakaran Hutan",
+                category: "Simulasi & Edukasi Animasi 3D",
+                src: "foto/portofoliovideo/kasuskebakaranhutan.mp4",
+                description: "Video animasi edukasi studi kasus kebakaran hutan dan mitigasinya sebagai media pembelajaran interaktif."
+            },
+            {
+                id: 2,
+                title: "KAI (Kereta Api Indonesia)",
+                category: "Animasi Transportasi & Lingkungan",
+                src: "foto/portofoliovideo/KAI.mp4",
+                description: "Simulasi 3D lingkungan kereta api dan fasilitas transportasi publik dengan detail tata letak sinematik."
+            },
+            {
+                id: 3,
+                title: "Rasa Leluhur di Dapur Gadang",
+                category: "Animasi Kuliner & Budaya Minang",
+                src: "foto/portofoliovideo/WanMuhammadAbduh_RasaLeluhurDiDapurGadang.mp4",
+                description: "Video showcase proyek animasi pemenang penghargaan bertema tradisi dan kuliner Minang."
+            }
+        ];
+
+        let currentLiveVideoIndex = 0;
+
+        function initLiveVideoSlider() {
+            loadLiveVideo(0);
+        }
+
+        function loadLiveVideo(index) {
+            if (index < 0 || index >= liveVideoData.length) return;
+            
+            currentLiveVideoIndex = index;
+            const data = liveVideoData[index];
+
+            const player = document.getElementById('live-video-player');
+            const source = document.getElementById('live-video-source');
+            const titleEl = document.getElementById('live-video-title');
+            const catEl = document.getElementById('live-video-category');
+            const descEl = document.getElementById('live-video-desc');
+            const badgeEl = document.getElementById('live-video-badge');
+            const indicatorEl = document.getElementById('live-video-indicator');
+
+            if (source && player) {
+                source.src = data.src;
+                player.load();
+                player.play();
+            }
+            if (titleEl) titleEl.innerText = data.title;
+            if (catEl) catEl.innerText = data.category;
+            if (descEl) descEl.innerText = data.description;
+            if (badgeEl) badgeEl.innerText = `Slide ${index + 1} / ${liveVideoData.length}`;
+            if (indicatorEl) indicatorEl.innerText = `${index + 1} dari ${liveVideoData.length}`;
+        }
+
+        function navigateLiveVideo(direction) {
+            let newIndex = currentLiveVideoIndex + direction;
+            if (newIndex < 0) {
+                newIndex = liveVideoData.length - 1;
+            } else if (newIndex >= liveVideoData.length) {
+                newIndex = 0;
+            }
+            loadLiveVideo(newIndex);
+        }
+
+        // Cerita Nano Series disesuaikan menjadi 2 video dari folder ceritanano
+        const seriesVideoData = [
+            {
+                id: 1,
+                title: "Cerita Nano - Final",
+                category: "Cerita Nano - Podcast Animasi 3D",
+                src: "foto/portofoliovideo/ceritanano/Final.mp4",
+                description: "Episode final seri dialog interaktif 3D podcast Cerita Nano."
+            },
+            {
+                id: 2,
+                title: "Cerita Nano - Kasus Kebakaran Hutan",
+                category: "Cerita Nano - Podcast Animasi 3D",
+                src: "foto/portofoliovideo/ceritanano/kasuskebakaranhutan.mp4",
+                description: "Seri dialog podcast 3D membahas studi kasus lingkungan."
+            }
+        ];
+
+        let currentSeriesVideoIndex = 0;
+
+        function initSeriesVideoSlider() {
+            loadSeriesVideo(0);
+        }
+
+        function loadSeriesVideo(index) {
+            if (index < 0 || index >= seriesVideoData.length) return;
+            
+            currentSeriesVideoIndex = index;
+            const data = seriesVideoData[index];
+
+            const player = document.getElementById('series-video-player');
+            const source = document.getElementById('series-video-source');
+            const titleEl = document.getElementById('series-video-title');
+            const catEl = document.getElementById('series-video-category');
+            const descEl = document.getElementById('series-video-desc');
+            const badgeEl = document.getElementById('series-video-badge');
+            const indicatorEl = document.getElementById('series-video-indicator');
+
+            if (source && player) {
+                source.src = data.src;
+                player.load();
+                player.play();
+            }
+            if (titleEl) titleEl.innerText = data.title;
+            if (catEl) catEl.innerText = data.category;
+            if (descEl) descEl.innerText = data.description;
+            if (badgeEl) badgeEl.innerText = `Ep ${index + 1} / ${seriesVideoData.length}`;
+            if (indicatorEl) indicatorEl.innerText = `Ep ${index + 1} dari ${seriesVideoData.length}`;
+        }
+
+        function navigateSeriesVideo(direction) {
+            let newIndex = currentSeriesVideoIndex + direction;
+            if (newIndex < 0) {
+                newIndex = seriesVideoData.length - 1;
+            } else if (newIndex >= seriesVideoData.length) {
+                newIndex = 0;
+            }
+            loadSeriesVideo(newIndex);
+        }
+
+        const sketchfabData = [
+            {
+                id: 1,
+                title: "Stylized Weapon",
+                category: "Weapon & Hard-Surface Model",
+                embedUrl: "https://sketchfab.com/3d-models/291fb7cd3bea4d379323dae507c0c339/embed",
+                description: "Model 3D interaktif senjata stylized siap pakai untuk aset animasi dan game. Anda dapat menggeser, memutar, dan melakukan zoom secara langsung."
+            },
+            {
+                id: 2,
+                title: "Environment Diorama",
+                category: "3D Environment & Props",
+                embedUrl: "https://sketchfab.com/3d-models/60205d15cbcd402e8cb145cf32e3a1f1/embed",
+                description: "Eksplorasi diorama lingkungan 3D dengan pencahayaan atmosferik serta optimasi tekstur PBR untuk real-time rendering."
+            }
+        ];
+
+        let currentSketchfabIndex = 0;
+
+        function initSketchfabGallery() {
+            const selectEl = document.getElementById('sketchfabSelect');
+            const badgeEl = document.getElementById('model-count-badge');
+            
+            if (!selectEl) return;
+
+            selectEl.innerHTML = '';
+            sketchfabData.forEach((item, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `${index + 1}. ${item.title} (${item.category})`;
+                selectEl.appendChild(option);
+            });
+
+            if (badgeEl) {
+                badgeEl.textContent = `${sketchfabData.length} Model`;
+            }
+
+            loadSketchfabModel(0);
+        }
+
+        function loadSketchfabModel(index) {
+            if (index < 0 || index >= sketchfabData.length) return;
+            
+            currentSketchfabIndex = index;
+            const data = sketchfabData[index];
+
+            const frame = document.getElementById('sketchfab-frame');
+            const titleEl = document.getElementById('sketchfab-title');
+            const catEl = document.getElementById('sketchfab-category');
+            const descEl = document.getElementById('sketchfab-desc');
+            const indicatorEl = document.getElementById('sketchfab-index-indicator');
+            const selectEl = document.getElementById('sketchfabSelect');
+
+            if (frame) frame.src = data.embedUrl;
+            if (titleEl) titleEl.innerText = data.title;
+            if (catEl) catEl.innerText = data.category;
+            if (descEl) descEl.innerText = data.description;
+            if (indicatorEl) indicatorEl.innerText = `${index + 1} / ${sketchfabData.length}`;
+            if (selectEl) selectEl.value = index;
+        }
+
+        function onSketchfabSelectChange(value) {
+            loadSketchfabModel(parseInt(value));
+        }
+
+        function navigateSketchfab(direction) {
+            let newIndex = currentSketchfabIndex + direction;
+            if (newIndex < 0) {
+                newIndex = sketchfabData.length - 1;
+            } else if (newIndex >= sketchfabData.length) {
+                newIndex = 0;
+            }
+            loadSketchfabModel(newIndex);
+        }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        function slideGallery(sliderId, direction) {
+            const slider = document.getElementById(sliderId);
+            const scrollAmount = 300;
+            if (slider) {
+                if (direction === 'left') {
+                    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                } else {
+                    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }
+        }
+
+        function openModal(modalId, videoUrl) {
+            const modal = document.getElementById(modalId);
+            const iframe = document.getElementById('modalIframe');
+            const img = document.getElementById('modalImage');
+            if (modal && iframe && img) {
+                img.classList.add('hidden');
+                iframe.classList.remove('hidden');
+                iframe.src = videoUrl;
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('modalIframe');
+            const img = document.getElementById('modalImage');
+            if (modal && iframe && img) {
+                iframe.classList.add('hidden');
+                iframe.src = '';
+                img.classList.remove('hidden');
+                img.src = imageSrc;
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const iframe = document.getElementById('modalIframe');
+            const img = document.getElementById('modalImage');
+            if (modal && iframe && img) {
+                iframe.src = '';
+                iframe.classList.add('hidden');
+                img.src = '';
+                img.classList.add('hidden');
+                modal.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
