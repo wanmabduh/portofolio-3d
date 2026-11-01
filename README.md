@@ -1,3 +1,7 @@
+<img width="1754" height="1241" alt="202609141445042255301193_dok_transkripaktifitas_page-0001" src="https://github.com/user-attachments/assets/12eb161a-d4cc-483f-9e7b-f0cfb71e8c9a" />
+<img width="2300" height="1725" alt="202609141438222255301193_dok_transkripaktifitas_page-0001" src="https://github.com/user-attachments/assets/67c29ad9-1e63-44b8-9d32-83fd075c45f6" />
+<img width="548" height="392" alt="inidia" src="https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f" />
+<img width="2656" height="3984" alt="IMG_0106" src="https://github.com/user-attachments/assets/9f807743-41df-48ef-8093-9db9d612008f" />
 <img width="1920" height="1080" alt="RasaLeluhurDiDapurGadang" src="https://github.com/user-attachments/assets/5067eef5-b54a-426e-b91a-ae8aac52d70f" />
 <img width="447" height="447" alt="inidia" src="https://github.com/user-attachments/assets/01d98683-2281-4cc8-b563-22f49756c4b5" />
 <img width="447" height="447" alt="mainimonki" src="https://github.com/user-attachments/assets/b639ead7-abac-4318-a0f1-7ea7c1fcfc70" />
