@@ -103,15 +103,14 @@
 
     <main class="mt-20">
         
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION (Live Background Video via YouTube Embed) -->
         <section id="home" class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-darkBg">
-            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <video autoplay muted loop playsinline class="w-full h-full object-cover filter brightness-90">
-                    <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/quicktime">
-                    <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/mp4">
-                    Browser Anda tidak mendukung pemutaran video ini.
-                </video>
-                <div class="absolute inset-0 bg-darkBg/40"></div>
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-60 scale-125">
+                <iframe class="w-full h-full object-cover" 
+                    src="https://www.youtube.com/embed/D5bu8BfK4fk?autoplay=1&mute=1&loop=1&playlist=D5bu8BfK4fk&controls=0&showinfo=0&autohide=1" 
+                    frameborder="0" allow="autoplay; encrypted-media">
+                </iframe>
+                <div class="absolute inset-0 bg-darkBg/60"></div>
             </div>
 
             <div class="absolute inset-0 bg-radial from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
@@ -167,30 +166,14 @@
                     </div>
 
                     <div class="md:col-span-7 relative group rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl">
-                        <img src="https://img.youtube.com/vi/3s_x6oa49S8/maxresdefault.jpg"
-                            alt="Video Thumbnail"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
-                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/3s_x6oa49S8')"
-                                class="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center text-xl shadow-xl hover:scale-110 hover:bg-pink-500 hover:text-white transition-all">
-                                <i class="fa-solid fa-play ml-1"></i>
-                            </button>
-                        </div>
-                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-zinc-300 bg-black/80 backdrop-blur-md px-3 py-2 rounded-xl border border-purple-900">
-                            <span><i class="fa-regular fa-clock mr-1 text-pink-400"></i> 02:45 Min</span>
-                            <span class="text-cyan-400 font-semibold">Cinematic Reel</span>
-                        </div>
+                        <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/3s_x6oa49S8" allowfullscreen></iframe>
                     </div>
                 </div>
 
-                <!-- ITEM 2 -->
+                <!-- ITEM 2: Animasi Bahasa Isyarat SIBI (Live YouTube Embed) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl order-2 md:order-1">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                            <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/quicktime">
-                            <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/mp4">
-                            Browser Anda tidak mendukung pemutaran video ini.
-                        </video>
+                        <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/D5bu8BfK4fk" allowfullscreen></iframe>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
                             <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> SIBI Animation Project
                         </div>
@@ -206,7 +189,7 @@
                     </div>
                 </div>
 
-                <!-- ITEM 2.5: Slider YouTube Video (Diperbarui dengan 5 Link YouTube Anda) -->
+                <!-- ITEM 2.5: Slider YouTube Video (Live & Berjalan Sempurna) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-5 flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
@@ -245,7 +228,7 @@
                                 allowfullscreen>
                         </iframe>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> YouTube Showcase
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live YouTube Showcase
                         </div>
                     </div>
                 </div>
@@ -299,47 +282,6 @@
                                     Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
                                 </button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITEM 2.6: CERITA NANO -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center bg-gradient-to-br from-[#130d26] via-[#1a0f35] to-[#0d071c] border border-pink-500/40 rounded-2xl p-4 md:p-6 glow-card transition-all">
-                    <div class="md:col-span-5 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold text-pink-300 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">Cerita Nano Series</span>
-                                <span id="series-video-badge" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Ep 1 / 2</span>
-                            </div>
-                            <h3 id="series-video-title" class="text-lg md:text-xl font-bold text-white">Cerita Nano Final</h3>
-                            <p id="series-video-category" class="text-[11px] font-semibold text-pink-400">Podcast Animasi 3D</p>
-                            <p id="series-video-desc" class="text-zinc-300 text-xs leading-relaxed">
-                                Seri dialog interaktif 3D podcast Cerita Nano.
-                            </p>
-                        </div>
-
-                        <div class="space-y-2 pt-2 border-t border-purple-900/50">
-                            <div class="flex items-center justify-between">
-                                <button onclick="navigateSeriesVideo(-1)" 
-                                    class="px-2.5 py-1 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-lg text-[10px] font-semibold flex items-center gap-1 transition-all">
-                                    <i class="fa-solid fa-arrow-left text-[8px]"></i> Prev
-                                </button>
-                                <span id="series-video-indicator" class="text-[11px] text-zinc-300 font-mono font-bold">Ep 1 dari 2</span>
-                                <button onclick="navigateSeriesVideo(1)" 
-                                    class="px-2.5 py-1 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-lg text-[10px] font-semibold flex items-center gap-1 transition-all">
-                                    Next <i class="fa-solid fa-arrow-right text-[8px]"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-7 relative rounded-xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-lg max-w-lg mx-auto w-full">
-                        <video id="series-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
-                            <source id="series-video-source" src="foto/portofoliovideo/ceritanano/Final.mp4" type="video/mp4">
-                            Browser Anda tidak mendukung pemutaran video ini.
-                        </video>
-                        <div class="absolute bottom-2 right-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-semibold text-white border border-purple-900 flex items-center gap-1 pointer-events-none">
-                            <span class="w-1.5 h-1.5 rounded-full bg-pink-500 animate-pulse"></span> Cerita Nano
                         </div>
                     </div>
                 </div>
@@ -853,7 +795,6 @@
             initThreeJsFooter('three-footer-canvas');
             initSketchfabGallery();
             initYoutubeSlider();
-            initSeriesVideoSlider();
             initCertificateSlider();
         });
 
@@ -1044,65 +985,6 @@
             loadYoutubeSlider(newIndex);
         }
 
-        const seriesVideoData = [
-            {
-                id: 1,
-                title: "Cerita Nano - Final",
-                category: "Cerita Nano - Podcast Animasi 3D",
-                src: "foto/portofoliovideo/ceritanano/Final.mp4",
-                description: "Episode final seri dialog interaktif 3D podcast Cerita Nano."
-            },
-            {
-                id: 2,
-                title: "Cerita Nano - Kasus Kebakaran Hutan",
-                category: "Cerita Nano - Podcast Animasi 3D",
-                src: "foto/portofoliovideo/ceritanano/kasuskebakaranhutan.mp4",
-                description: "Seri dialog podcast 3D membahas studi kasus lingkungan."
-            }
-        ];
-
-        let currentSeriesVideoIndex = 0;
-
-        function initSeriesVideoSlider() {
-            loadSeriesVideo(0);
-        }
-
-        function loadSeriesVideo(index) {
-            if (index < 0 || index >= seriesVideoData.length) return;
-            
-            currentSeriesVideoIndex = index;
-            const data = seriesVideoData[index];
-
-            const player = document.getElementById('series-video-player');
-            const source = document.getElementById('series-video-source');
-            const titleEl = document.getElementById('series-video-title');
-            const catEl = document.getElementById('series-video-category');
-            const descEl = document.getElementById('series-video-desc');
-            const badgeEl = document.getElementById('series-video-badge');
-            const indicatorEl = document.getElementById('series-video-indicator');
-
-            if (source && player) {
-                source.src = data.src;
-                player.load();
-                player.play();
-            }
-            if (titleEl) titleEl.innerText = data.title;
-            if (catEl) catEl.innerText = data.category;
-            if (descEl) descEl.innerText = data.description;
-            if (badgeEl) badgeEl.innerText = `Ep ${index + 1} / ${seriesVideoData.length}`;
-            if (indicatorEl) indicatorEl.innerText = `Ep ${index + 1} dari ${seriesVideoData.length}`;
-        }
-
-        function navigateSeriesVideo(direction) {
-            let newIndex = currentSeriesVideoIndex + direction;
-            if (newIndex < 0) {
-                newIndex = seriesVideoData.length - 1;
-            } else if (newIndex >= seriesVideoData.length) {
-                newIndex = 0;
-            }
-            loadSeriesVideo(newIndex);
-        }
-
         const sketchfabData = [
             {
                 id: 1,
@@ -1207,7 +1089,7 @@
                 img.classList.add('hidden');
                 iframe.classList.remove('hidden');
                 iframe.src = videoUrl;
-                modal.classList.remove('hidden');
+                modal.classList.add('hidden');
             }
         }
 
