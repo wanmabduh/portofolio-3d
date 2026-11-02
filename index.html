@@ -206,29 +206,29 @@
                     </div>
                 </div>
 
-                <!-- ITEM 2.5: Slider 3 Video Live -->
+                <!-- ITEM 2.5: Slider YouTube Video (Diperbarui dengan 5 Link YouTube Anda) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-5 flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30 uppercase tracking-wider">Live Video Slider</span>
-                                <span id="live-video-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Slide 1 / 3</span>
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30 uppercase tracking-wider">YouTube Video Slider</span>
+                                <span id="youtube-slider-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Video 1 / 5</span>
                             </div>
-                            <h3 id="live-video-title" class="text-2xl md:text-3xl font-bold text-white">Kebakaran Hutan</h3>
-                            <p id="live-video-category" class="text-xs font-semibold text-cyan-400">Simulasi & Edukasi Animasi 3D</p>
-                            <p id="live-video-desc" class="text-zinc-300 text-sm leading-relaxed">
-                                Video animasi edukasi studi kasus kebakaran hutan dan mitigasinya sebagai media pembelajaran interaktif.
+                            <h3 id="youtube-slider-title" class="text-2xl md:text-3xl font-bold text-white">Pasien Tetap Manusia</h3>
+                            <p id="youtube-slider-category" class="text-xs font-semibold text-cyan-400">Podcast & Animasi Edukasi</p>
+                            <p id="youtube-slider-desc" class="text-zinc-300 text-sm leading-relaxed">
+                                Video animasi edukasi interaktif tentang etika pelayanan kesehatan dan kemanusiaan.
                             </p>
                         </div>
 
                         <div class="space-y-3 pt-4 border-t border-purple-900/60">
                             <div class="flex items-center justify-between">
-                                <button onclick="navigateLiveVideo(-1)" 
+                                <button onclick="navigateYoutubeSlider(-1)" 
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
                                 </button>
-                                <span id="live-video-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 3</span>
-                                <button onclick="navigateLiveVideo(1)" 
+                                <span id="youtube-slider-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 5</span>
+                                <button onclick="navigateYoutubeSlider(1)" 
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
                                 </button>
@@ -237,12 +237,15 @@
                     </div>
 
                     <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl">
-                        <video id="live-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
-                            <source id="live-video-source" src="foto/portofoliovideo/kasuskebakaranhutan.mp4" type="video/mp4">
-                            Browser Anda tidak mendukung pemutaran video ini.
-                        </video>
+                        <iframe id="youtube-slider-iframe"
+                                title="YouTube Video Player" 
+                                class="w-full h-full rounded-xl"
+                                src="https://www.youtube.com/embed/D5bu8BfK4fk" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live Video Slide
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> YouTube Showcase
                         </div>
                     </div>
                 </div>
@@ -849,7 +852,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             initThreeJsFooter('three-footer-canvas');
             initSketchfabGallery();
-            initLiveVideoSlider();
+            initYoutubeSlider();
             initSeriesVideoSlider();
             initCertificateSlider();
         });
@@ -966,70 +969,79 @@
             loadCertificate(newIndex);
         }
 
-        const liveVideoData = [
+        const youtubeSliderData = [
             {
                 id: 1,
-                title: "Kebakaran Hutan",
-                category: "Simulasi & Edukasi Animasi 3D",
-                src: "foto/portofoliovideo/kasuskebakaranhutan.mp4",
-                description: "Video animasi edukasi studi kasus kebakaran hutan dan mitigasinya sebagai media pembelajaran interaktif."
+                title: "Pasien Tetap Manusia",
+                category: "Podcast & Animasi Edukasi",
+                embedUrl: "https://www.youtube.com/embed/D5bu8BfK4fk",
+                description: "Video animasi edukasi interaktif tentang etika pelayanan kesehatan dan kemanusiaan."
             },
             {
                 id: 2,
                 title: "KAI (Kereta Api Indonesia)",
                 category: "Animasi Transportasi & Lingkungan",
-                src: "foto/portofoliovideo/KAI.mp4",
+                embedUrl: "https://www.youtube.com/embed/PV8AeoZ4Sho",
                 description: "Simulasi 3D lingkungan kereta api dan fasilitas transportasi publik dengan detail tata letak sinematik."
             },
             {
                 id: 3,
-                title: "Rasa Leluhur di Dapur Gadang",
-                category: "Animasi Kuliner & Budaya Minang",
-                src: "foto/portofoliovideo/WanMuhammadAbduh_RasaLeluhurDiDapurGadang.mp4",
-                description: "Video showcase proyek animasi pemenang penghargaan bertema tradisi dan kuliner Minang."
+                title: "Komputer 3D Studio",
+                category: "Hard-Surface & Environment Showcase",
+                embedUrl: "https://www.youtube.com/embed/HGdCVj-zeiM",
+                description: "Showcase pemodelan perangkat keras komputer retro dan tata letak interior studio 3D."
+            },
+            {
+                id: 4,
+                title: "Cerita Nano Series",
+                category: "Podcast Animasi 3D",
+                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM",
+                description: "Seri dialog podcast animasi 3D interaktif bertema isu sosial dan cerita inspiratif."
+            },
+            {
+                id: 5,
+                title: "Kasus Kebakaran Hutan",
+                category: "Simulasi & Edukasi Isu Lingkungan",
+                embedUrl: "https://www.youtube.com/embed/nN3DIAAtxQ4",
+                description: "Video animasi studi kasus kebakaran hutan, dampak lingkungan, dan edukasi mitigasinya."
             }
         ];
 
-        let currentLiveVideoIndex = 0;
+        let currentYoutubeSliderIndex = 0;
 
-        function initLiveVideoSlider() {
-            loadLiveVideo(0);
+        function initYoutubeSlider() {
+            loadYoutubeSlider(0);
         }
 
-        function loadLiveVideo(index) {
-            if (index < 0 || index >= liveVideoData.length) return;
+        function loadYoutubeSlider(index) {
+            if (index < 0 || index >= youtubeSliderData.length) return;
             
-            currentLiveVideoIndex = index;
-            const data = liveVideoData[index];
+            currentYoutubeSliderIndex = index;
+            const data = youtubeSliderData[index];
 
-            const player = document.getElementById('live-video-player');
-            const source = document.getElementById('live-video-source');
-            const titleEl = document.getElementById('live-video-title');
-            const catEl = document.getElementById('live-video-category');
-            const descEl = document.getElementById('live-video-desc');
-            const badgeEl = document.getElementById('live-video-badge');
-            const indicatorEl = document.getElementById('live-video-indicator');
+            const iframe = document.getElementById('youtube-slider-iframe');
+            const titleEl = document.getElementById('youtube-slider-title');
+            const catEl = document.getElementById('youtube-slider-category');
+            const descEl = document.getElementById('youtube-slider-desc');
+            const badgeEl = document.getElementById('youtube-slider-badge');
+            const indicatorEl = document.getElementById('youtube-slider-indicator');
 
-            if (source && player) {
-                source.src = data.src;
-                player.load();
-                player.play();
-            }
+            if (iframe) iframe.src = data.embedUrl;
             if (titleEl) titleEl.innerText = data.title;
             if (catEl) catEl.innerText = data.category;
             if (descEl) descEl.innerText = data.description;
-            if (badgeEl) badgeEl.innerText = `Slide ${index + 1} / ${liveVideoData.length}`;
-            if (indicatorEl) indicatorEl.innerText = `${index + 1} dari ${liveVideoData.length}`;
+            if (badgeEl) badgeEl.innerText = `Video ${index + 1} / ${youtubeSliderData.length}`;
+            if (indicatorEl) indicatorEl.innerText = `${index + 1} dari ${youtubeSliderData.length}`;
         }
 
-        function navigateLiveVideo(direction) {
-            let newIndex = currentLiveVideoIndex + direction;
+        function navigateYoutubeSlider(direction) {
+            let newIndex = currentYoutubeSliderIndex + direction;
             if (newIndex < 0) {
-                newIndex = liveVideoData.length - 1;
-            } else if (newIndex >= liveVideoData.length) {
+                newIndex = youtubeSliderData.length - 1;
+            } else if (newIndex >= youtubeSliderData.length) {
                 newIndex = 0;
             }
-            loadLiveVideo(newIndex);
+            loadYoutubeSlider(newIndex);
         }
 
         const seriesVideoData = [
