@@ -103,14 +103,15 @@
 
     <main class="mt-20">
         
-        <!-- HERO SECTION (Live Background Video via YouTube Embed) -->
+        <!-- HERO SECTION -->
         <section id="home" class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-darkBg">
-            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-60 scale-125">
-                <iframe class="w-full h-full object-cover" 
-                    src="https://www.youtube.com/embed/D5bu8BfK4fk?autoplay=1&mute=1&loop=1&playlist=D5bu8BfK4fk&controls=0&showinfo=0&autohide=1" 
-                    frameborder="0" allow="autoplay; encrypted-media">
-                </iframe>
-                <div class="absolute inset-0 bg-darkBg/60"></div>
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <video autoplay muted loop playsinline class="w-full h-full object-cover filter brightness-90">
+                    <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/quicktime">
+                    <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/mp4">
+                    Browser Anda tidak mendukung pemutaran video ini.
+                </video>
+                <div class="absolute inset-0 bg-darkBg/40"></div>
             </div>
 
             <div class="absolute inset-0 bg-radial from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
@@ -166,14 +167,30 @@
                     </div>
 
                     <div class="md:col-span-7 relative group rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl">
-                        <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/3s_x6oa49S8" allowfullscreen></iframe>
+                        <img src="https://img.youtube.com/vi/3s_x6oa49S8/maxresdefault.jpg"
+                            alt="Video Thumbnail"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
+                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/3s_x6oa49S8')"
+                                class="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center text-xl shadow-xl hover:scale-110 hover:bg-pink-500 hover:text-white transition-all">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs text-zinc-300 bg-black/80 backdrop-blur-md px-3 py-2 rounded-xl border border-purple-900">
+                            <span><i class="fa-regular fa-clock mr-1 text-pink-400"></i> 02:45 Min</span>
+                            <span class="text-cyan-400 font-semibold">Cinematic Reel</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ITEM 2: Animasi Bahasa Isyarat SIBI (Live YouTube Embed) -->
+                <!-- ITEM 2 -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl order-2 md:order-1">
-                        <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/D5bu8BfK4fk" allowfullscreen></iframe>
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/quicktime">
+                            <source src="foto/portofoliovideo/Revisi (2).MOV" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video ini.
+                        </video>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
                             <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> SIBI Animation Project
                         </div>
@@ -189,29 +206,29 @@
                     </div>
                 </div>
 
-                <!-- ITEM 2.5: Slider YouTube Video (Live & Berjalan Sempurna) -->
+                <!-- ITEM 2.5: Slider 3 Video Live -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-5 flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30 uppercase tracking-wider">YouTube Video Slider</span>
-                                <span id="youtube-slider-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Video 1 / 5</span>
+                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30 uppercase tracking-wider">Live Video Slider</span>
+                                <span id="live-video-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Slide 1 / 3</span>
                             </div>
-                            <h3 id="youtube-slider-title" class="text-2xl md:text-3xl font-bold text-white">Pasien Tetap Manusia</h3>
-                            <p id="youtube-slider-category" class="text-xs font-semibold text-cyan-400">Podcast & Animasi Edukasi</p>
-                            <p id="youtube-slider-desc" class="text-zinc-300 text-sm leading-relaxed">
-                                Video animasi edukasi interaktif tentang etika pelayanan kesehatan dan kemanusiaan.
+                            <h3 id="live-video-title" class="text-2xl md:text-3xl font-bold text-white">Kebakaran Hutan</h3>
+                            <p id="live-video-category" class="text-xs font-semibold text-cyan-400">Simulasi & Edukasi Animasi 3D</p>
+                            <p id="live-video-desc" class="text-zinc-300 text-sm leading-relaxed">
+                                Video animasi edukasi studi kasus kebakaran hutan dan mitigasinya sebagai media pembelajaran interaktif.
                             </p>
                         </div>
 
                         <div class="space-y-3 pt-4 border-t border-purple-900/60">
                             <div class="flex items-center justify-between">
-                                <button onclick="navigateYoutubeSlider(-1)" 
+                                <button onclick="navigateLiveVideo(-1)" 
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
                                 </button>
-                                <span id="youtube-slider-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 5</span>
-                                <button onclick="navigateYoutubeSlider(1)" 
+                                <span id="live-video-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 3</span>
+                                <button onclick="navigateLiveVideo(1)" 
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
                                 </button>
@@ -220,15 +237,12 @@
                     </div>
 
                     <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl">
-                        <iframe id="youtube-slider-iframe"
-                                title="YouTube Video Player" 
-                                class="w-full h-full rounded-xl"
-                                src="https://www.youtube.com/embed/D5bu8BfK4fk" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+                        <video id="live-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source id="live-video-source" src="foto/portofoliovideo/kasuskebakaranhutan.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video ini.
+                        </video>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live YouTube Showcase
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live Video Slide
                         </div>
                     </div>
                 </div>
@@ -286,6 +300,47 @@
                     </div>
                 </div>
 
+                <!-- ITEM 2.6: CERITA NANO -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center bg-gradient-to-br from-[#130d26] via-[#1a0f35] to-[#0d071c] border border-pink-500/40 rounded-2xl p-4 md:p-6 glow-card transition-all">
+                    <div class="md:col-span-5 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold text-pink-300 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">Cerita Nano Series</span>
+                                <span id="series-video-badge" class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Ep 1 / 2</span>
+                            </div>
+                            <h3 id="series-video-title" class="text-lg md:text-xl font-bold text-white">Cerita Nano Final</h3>
+                            <p id="series-video-category" class="text-[11px] font-semibold text-pink-400">Podcast Animasi 3D</p>
+                            <p id="series-video-desc" class="text-zinc-300 text-xs leading-relaxed">
+                                Seri dialog interaktif 3D podcast Cerita Nano.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 pt-2 border-t border-purple-900/50">
+                            <div class="flex items-center justify-between">
+                                <button onclick="navigateSeriesVideo(-1)" 
+                                    class="px-2.5 py-1 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-lg text-[10px] font-semibold flex items-center gap-1 transition-all">
+                                    <i class="fa-solid fa-arrow-left text-[8px]"></i> Prev
+                                </button>
+                                <span id="series-video-indicator" class="text-[11px] text-zinc-300 font-mono font-bold">Ep 1 dari 2</span>
+                                <button onclick="navigateSeriesVideo(1)" 
+                                    class="px-2.5 py-1 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-lg text-[10px] font-semibold flex items-center gap-1 transition-all">
+                                    Next <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 relative rounded-xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-lg max-w-lg mx-auto w-full">
+                        <video id="series-video-player" autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source id="series-video-source" src="foto/portofoliovideo/ceritanano/Final.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video ini.
+                        </video>
+                        <div class="absolute bottom-2 right-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-semibold text-white border border-purple-900 flex items-center gap-1 pointer-events-none">
+                            <span class="w-1.5 h-1.5 rounded-full bg-pink-500 animate-pulse"></span> Cerita Nano
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -321,7 +376,7 @@
                     <!-- Bank -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/ae01b98a-ce2a-41d2-bcd7-5c9723062cfc" alt="Bank 3D Model" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Bank.png" alt="Bank 3D Model" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Bank 3D Model</h4>
@@ -332,7 +387,7 @@
                     <!-- Camera Vintage -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/ecb20cae-c746-4959-9668-4120ce3f7aea" alt="Camera Vintage" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Camera Vintage.png" alt="Camera Vintage" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Camera Vintage</h4>
@@ -343,7 +398,7 @@
                     <!-- Delivery Scooter -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/c14b6018-4de4-4fc7-906d-4be8531f6867" alt="Delivery Scooter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Delivery scooter.png" alt="Delivery Scooter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Delivery Scooter</h4>
@@ -354,7 +409,7 @@
                     <!-- Earth Diorama -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/f5c86196-5ae0-4984-af06-48f7e36f7271" alt="Earth Diorama" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Earth.png" alt="Earth Diorama" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Earth Diorama</h4>
@@ -365,7 +420,7 @@
                     <!-- Hatching Chick -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/9b5045a3-4244-43c9-9eb6-b73e817ce61b" alt="Hatching Chick" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Hatching Chick.png" alt="Hatching Chick" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Hatching Chick</h4>
@@ -376,7 +431,7 @@
                     <!-- Lemon Pie -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/aedd435f-4585-4349-85c7-eaba0144c1fe" alt="Lemon Pie" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Lemon Pie.png" alt="Lemon Pie" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Lemon Pie</h4>
@@ -387,7 +442,7 @@
                     <!-- Music Player -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/357fbe3f-19bc-4e65-8f5a-5a04a3dacfb2" alt="Music Player" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Music Player.png" alt="Music Player" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Music Player</h4>
@@ -398,7 +453,7 @@
                     <!-- Sheep Character -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/1ca46b5f-26da-4496-a8e1-85f0f7dfe4c1" alt="Sheep Character" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Sheep.png" alt="Sheep Character" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Sheep Character</h4>
@@ -409,7 +464,7 @@
                     <!-- Taco Prop -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/490e6cb1-5491-482c-af70-dd5a34d24b5c" alt="Taco Prop" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Taco.png" alt="Taco Prop" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Taco Prop</h4>
@@ -420,7 +475,7 @@
                     <!-- Vas Seladon Goryeo -->
                     <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-4">
-                            <img src="https://github.com/user-attachments/assets/739aaafd-7273-4a52-ab72-883ce82e5de9" alt="Vas Seladon Goryeo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Vas Seladon Goryeo.png" alt="Vas Seladon Goryeo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-4 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Vas Seladon Goryeo</h4>
@@ -454,7 +509,7 @@
                     <!-- Rasa Leluhur di Dapur Gadang -->
                     <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
-                            <img src="https://github.com/user-attachments/assets/5067eef5-b54a-426e-b91a-ae8aac52d70f" alt="Rasa Leluhur di Dapur Gadang" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/RasaLeluhurDiDapurGadang.png" alt="Rasa Leluhur di Dapur Gadang" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-5 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Rasa Leluhur di Dapur Gadang</h4>
@@ -465,7 +520,7 @@
                     <!-- Stylized Weapon Showcase -->
                     <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
-                            <img src="https://github.com/user-attachments/assets/6c27b8b8-2581-4915-87ee-d6ed66bb098c" alt="Stylized Weapon" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/weapon.png" alt="Stylized Weapon" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-5 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Stylized Weapon Showcase</h4>
@@ -476,7 +531,7 @@
                     <!-- Pisau -->
                     <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
-                            <img src="https://github.com/user-attachments/assets/d9e1a969-7819-464c-9041-615a8b3bb2c7" alt="Pisau 3D Model" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Pisau.png" alt="Pisau 3D Model" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-5 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Pisau Showcase</h4>
@@ -487,7 +542,7 @@
                     <!-- Telephone -->
                     <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
-                            <img src="https://github.com/user-attachments/assets/fe28647d-54fc-4c12-91e0-96c377462485" alt="Telephone Vintage" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Telephone.png" alt="Telephone Vintage" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-5 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Telephone Vintage</h4>
@@ -498,7 +553,7 @@
                     <!-- Hidran -->
                     <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
-                            <img src="https://github.com/user-attachments/assets/fbf0eccc-288b-454c-b408-0c8906d74d07" alt="Hidran Air" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Hidran.png" alt="Hidran Air" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-5 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Hidran Pemadam Fire</h4>
@@ -509,7 +564,7 @@
                     <!-- Mousee -->
                     <div class="w-[280px] md:w-[320px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
                         <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
-                            <img src="https://github.com/user-attachments/assets/1fe18d72-bce0-4da5-9301-1fb0da918b3c" alt="Gaming Mouse" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <img src="foto/portofoliofoto/Mousee.png" alt="Gaming Mouse" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <div class="p-5 space-y-1 border-t border-purple-900/30">
                             <h4 class="text-sm font-bold text-white truncate">Gaming Mouse</h4>
@@ -560,7 +615,7 @@
                     </div>
 
                     <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl group cursor-pointer" onclick="openImageModal(currentCertImageSrc)">
-                        <img id="cert-image" src="https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f" alt="Sertifikat Magang IniDia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img id="cert-image" src="foto/ser/inidia.jpg" alt="Sertifikat Magang IniDia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                             <span class="text-xs font-semibold text-white bg-black/80 px-4 py-2 rounded-xl border border-purple-800 shadow-xl">Klik untuk Perbesar Gambar</span>
                         </div>
@@ -631,7 +686,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
                                     <div class="w-14 h-14 rounded-2xl bg-zinc-950 border border-purple-900 flex items-center justify-center overflow-hidden p-1.5">
-                                        <img src="https://github.com/user-attachments/assets/01d98683-2281-4cc8-b563-22f49756c4b5" alt="IniDia Studio Logo" class="w-full h-full object-contain rounded-xl">
+                                        <img src="foto/Logo/inidia.png" alt="IniDia Studio Logo" class="w-full h-full object-contain rounded-xl">
                                     </div>
                                     <div>
                                         <h3 class="text-xl font-bold text-white">IniDia Studio</h3>
@@ -649,8 +704,8 @@
 
                         <div class="space-y-2">
                             <p class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Dokumentasi / Sertifikat Magang</p>
-                            <div class="w-full h-48 rounded-2xl overflow-hidden border border-purple-900/60 bg-zinc-950 relative group cursor-pointer" onclick="openImageModal('https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f')">
-                                <img src="https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f" 
+                            <div class="w-full h-48 rounded-2xl overflow-hidden border border-purple-900/60 bg-zinc-950 relative group cursor-pointer" onclick="openImageModal('foto/ser/inidia.jpg')">
+                                <img src="foto/ser/inidia.jpg" 
                                     alt="Sertifikat IniDia Studio" 
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -660,13 +715,13 @@
                         </div>
                     </div>
 
-                    <!-- Internship 2: Manimonki Studio -->
+                    <!-- Internship 2: Manimonki Studio (Dengan Logo yang Diperbarui sesuai Screenshot GitHub Anda) -->
                     <div class="bg-cardBg border border-purple-900/50 rounded-3xl p-8 glow-card flex flex-col justify-between space-y-6 transition-all">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
                                     <div class="w-14 h-14 rounded-2xl bg-zinc-950 border border-purple-900 flex items-center justify-center overflow-hidden p-1.5">
-                                        <img src="https://github.com/user-attachments/assets/b639ead7-abac-4318-a0f1-7ea7c1fcfc70" alt="Manimonki Studio Logo" class="w-full h-full object-cover rounded-xl">
+                                        <img src="foto/Logo/mainimonki.jpg" alt="Manimonki Studio Logo" class="w-full h-full object-cover rounded-xl">
                                     </div>
                                     <div>
                                         <h3 class="text-xl font-bold text-white">Manimonki Studio</h3>
@@ -700,7 +755,7 @@
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-5 relative">
                     <div class="absolute inset-0 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-3xl blur-xl opacity-30"></div>
-                    <img src="https://github.com/user-attachments/assets/9f807743-41df-48ef-8093-9db9d612008f"
+                    <img src="foto/profil/IMG_0106.JPG"
                         alt="Wan Muhammad Abduh"
                         class="relative rounded-3xl border border-purple-900 shadow-2xl w-full aspect-square object-cover">
                 </div>
@@ -794,7 +849,8 @@
         window.addEventListener('DOMContentLoaded', () => {
             initThreeJsFooter('three-footer-canvas');
             initSketchfabGallery();
-            initYoutubeSlider();
+            initLiveVideoSlider();
+            initSeriesVideoSlider();
             initCertificateSlider();
         });
 
@@ -852,21 +908,21 @@
                 id: 1,
                 title: "IniDia Studio",
                 category: "Certificate of Internship Completion",
-                src: "https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f",
+                src: "foto/ser/inidia.jpg",
                 description: "Sertifikat resmi kelulusan program magang sebagai 3D Modeler di IniDia Studio (PT Inidia Visual Cakrawala)."
             },
             {
                 id: 2,
                 title: "Battle Field of Devata (BFOD) 2026",
                 category: "Favorite Artwork Winner",
-                src: "https://github.com/user-attachments/assets/67c29ad9-1e63-44b8-9d32-83fd075c45f6",
+                src: "foto/ser/202609141438222255301193_dok_transkripaktifitas_page-0001.jpg",
                 description: "Penghargaan sebagai Favorite Artwork Winner dalam ajang kompetisi Battle Field of Devata (BFOD) melalui pemungutan suara publik dan apresiasi komunitas."
             },
             {
                 id: 3,
                 title: "Padang International Animation & Game Expo (PIAGEX) 2026",
                 category: "Favorite Winner - " + '"Rasa Leluhur di Dapur Gadang"',
-                src: "https://github.com/user-attachments/assets/12eb161a-d4cc-483f-9e7b-f0cfb71e8c9a",
+                src: "foto/ser/202609141445042255301193_dok_transkripaktifitas_page-0001.jpg",
                 description: "Penghargaan Juara Favorit (Favorite Winner) dari Online Submission dalam ajang Padang International Animation and Game Expo (PIAGEX) 2026."
             }
         ];
@@ -910,79 +966,129 @@
             loadCertificate(newIndex);
         }
 
-        const youtubeSliderData = [
+        const liveVideoData = [
             {
                 id: 1,
-                title: "Pasien Tetap Manusia",
-                category: "Podcast & Animasi Edukasi",
-                embedUrl: "https://www.youtube.com/embed/D5bu8BfK4fk",
-                description: "Video animasi edukasi interaktif tentang etika pelayanan kesehatan dan kemanusiaan."
+                title: "Kebakaran Hutan",
+                category: "Simulasi & Edukasi Animasi 3D",
+                src: "foto/portofoliovideo/kasuskebakaranhutan.mp4",
+                description: "Video animasi edukasi studi kasus kebakaran hutan dan mitigasinya sebagai media pembelajaran interaktif."
             },
             {
                 id: 2,
                 title: "KAI (Kereta Api Indonesia)",
                 category: "Animasi Transportasi & Lingkungan",
-                embedUrl: "https://www.youtube.com/embed/PV8AeoZ4Sho",
+                src: "foto/portofoliovideo/KAI.mp4",
                 description: "Simulasi 3D lingkungan kereta api dan fasilitas transportasi publik dengan detail tata letak sinematik."
             },
             {
                 id: 3,
-                title: "Komputer 3D Studio",
-                category: "Hard-Surface & Environment Showcase",
-                embedUrl: "https://www.youtube.com/embed/HGdCVj-zeiM",
-                description: "Showcase pemodelan perangkat keras komputer retro dan tata letak interior studio 3D."
-            },
-            {
-                id: 4,
-                title: "Cerita Nano Series",
-                category: "Podcast Animasi 3D",
-                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM",
-                description: "Seri dialog podcast animasi 3D interaktif bertema isu sosial dan cerita inspiratif."
-            },
-            {
-                id: 5,
-                title: "Kasus Kebakaran Hutan",
-                category: "Simulasi & Edukasi Isu Lingkungan",
-                embedUrl: "https://www.youtube.com/embed/nN3DIAAtxQ4",
-                description: "Video animasi studi kasus kebakaran hutan, dampak lingkungan, dan edukasi mitigasinya."
+                title: "Rasa Leluhur di Dapur Gadang",
+                category: "Animasi Kuliner & Budaya Minang",
+                src: "foto/portofoliovideo/WanMuhammadAbduh_RasaLeluhurDiDapurGadang.mp4",
+                description: "Video showcase proyek animasi pemenang penghargaan bertema tradisi dan kuliner Minang."
             }
         ];
 
-        let currentYoutubeSliderIndex = 0;
+        let currentLiveVideoIndex = 0;
 
-        function initYoutubeSlider() {
-            loadYoutubeSlider(0);
+        function initLiveVideoSlider() {
+            loadLiveVideo(0);
         }
 
-        function loadYoutubeSlider(index) {
-            if (index < 0 || index >= youtubeSliderData.length) return;
+        function loadLiveVideo(index) {
+            if (index < 0 || index >= liveVideoData.length) return;
             
-            currentYoutubeSliderIndex = index;
-            const data = youtubeSliderData[index];
+            currentLiveVideoIndex = index;
+            const data = liveVideoData[index];
 
-            const iframe = document.getElementById('youtube-slider-iframe');
-            const titleEl = document.getElementById('youtube-slider-title');
-            const catEl = document.getElementById('youtube-slider-category');
-            const descEl = document.getElementById('youtube-slider-desc');
-            const badgeEl = document.getElementById('youtube-slider-badge');
-            const indicatorEl = document.getElementById('youtube-slider-indicator');
+            const player = document.getElementById('live-video-player');
+            const source = document.getElementById('live-video-source');
+            const titleEl = document.getElementById('live-video-title');
+            const catEl = document.getElementById('live-video-category');
+            const descEl = document.getElementById('live-video-desc');
+            const badgeEl = document.getElementById('live-video-badge');
+            const indicatorEl = document.getElementById('live-video-indicator');
 
-            if (iframe) iframe.src = data.embedUrl;
+            if (source && player) {
+                source.src = data.src;
+                player.load();
+                player.play();
+            }
             if (titleEl) titleEl.innerText = data.title;
             if (catEl) catEl.innerText = data.category;
             if (descEl) descEl.innerText = data.description;
-            if (badgeEl) badgeEl.innerText = `Video ${index + 1} / ${youtubeSliderData.length}`;
-            if (indicatorEl) indicatorEl.innerText = `${index + 1} dari ${youtubeSliderData.length}`;
+            if (badgeEl) badgeEl.innerText = `Slide ${index + 1} / ${liveVideoData.length}`;
+            if (indicatorEl) indicatorEl.innerText = `${index + 1} dari ${liveVideoData.length}`;
         }
 
-        function navigateYoutubeSlider(direction) {
-            let newIndex = currentYoutubeSliderIndex + direction;
+        function navigateLiveVideo(direction) {
+            let newIndex = currentLiveVideoIndex + direction;
             if (newIndex < 0) {
-                newIndex = youtubeSliderData.length - 1;
-            } else if (newIndex >= youtubeSliderData.length) {
+                newIndex = liveVideoData.length - 1;
+            } else if (newIndex >= liveVideoData.length) {
                 newIndex = 0;
             }
-            loadYoutubeSlider(newIndex);
+            loadLiveVideo(newIndex);
+        }
+
+        const seriesVideoData = [
+            {
+                id: 1,
+                title: "Cerita Nano - Final",
+                category: "Cerita Nano - Podcast Animasi 3D",
+                src: "foto/portofoliovideo/ceritanano/Final.mp4",
+                description: "Episode final seri dialog interaktif 3D podcast Cerita Nano."
+            },
+            {
+                id: 2,
+                title: "Cerita Nano - Kasus Kebakaran Hutan",
+                category: "Cerita Nano - Podcast Animasi 3D",
+                src: "foto/portofoliovideo/ceritanano/kasuskebakaranhutan.mp4",
+                description: "Seri dialog podcast 3D membahas studi kasus lingkungan."
+            }
+        ];
+
+        let currentSeriesVideoIndex = 0;
+
+        function initSeriesVideoSlider() {
+            loadSeriesVideo(0);
+        }
+
+        function loadSeriesVideo(index) {
+            if (index < 0 || index >= seriesVideoData.length) return;
+            
+            currentSeriesVideoIndex = index;
+            const data = seriesVideoData[index];
+
+            const player = document.getElementById('series-video-player');
+            const source = document.getElementById('series-video-source');
+            const titleEl = document.getElementById('series-video-title');
+            const catEl = document.getElementById('series-video-category');
+            const descEl = document.getElementById('series-video-desc');
+            const badgeEl = document.getElementById('series-video-badge');
+            const indicatorEl = document.getElementById('series-video-indicator');
+
+            if (source && player) {
+                source.src = data.src;
+                player.load();
+                player.play();
+            }
+            if (titleEl) titleEl.innerText = data.title;
+            if (catEl) catEl.innerText = data.category;
+            if (descEl) descEl.innerText = data.description;
+            if (badgeEl) badgeEl.innerText = `Ep ${index + 1} / ${seriesVideoData.length}`;
+            if (indicatorEl) indicatorEl.innerText = `Ep ${index + 1} dari ${seriesVideoData.length}`;
+        }
+
+        function navigateSeriesVideo(direction) {
+            let newIndex = currentSeriesVideoIndex + direction;
+            if (newIndex < 0) {
+                newIndex = seriesVideoData.length - 1;
+            } else if (newIndex >= seriesVideoData.length) {
+                newIndex = 0;
+            }
+            loadSeriesVideo(newIndex);
         }
 
         const sketchfabData = [
@@ -1089,7 +1195,7 @@
                 img.classList.add('hidden');
                 iframe.classList.remove('hidden');
                 iframe.src = videoUrl;
-                modal.classList.add('hidden');
+                modal.classList.remove('hidden');
             }
         }
 
