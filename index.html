@@ -103,11 +103,14 @@
 
     <main class="mt-20">
         
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION (Auto Berputar Video Bahasa Isyarat SIBI) -->
         <section id="home" class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-darkBg">
-            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
-                <div class="absolute -top-40 -left-40 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] animate-pulse"></div>
-                <div class="absolute top-1/2 -right-20 w-96 h-96 bg-pink-600 rounded-full mix-blend-multiply filter blur-[128px] animate-pulse"></div>
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-60 scale-125">
+                <iframe class="w-full h-full object-cover" 
+                    src="https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM&controls=0&showinfo=0" 
+                    frameborder="0" allow="autoplay; encrypted-media">
+                </iframe>
+                <div class="absolute inset-0 bg-darkBg/60"></div>
             </div>
 
             <div class="absolute inset-0 bg-radial from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
@@ -145,7 +148,7 @@
 
             <div class="space-y-10">
                 
-                <!-- ITEM 1 -->
+                <!-- ITEM 1 (Gambar 2 Diubah Menjadi Prodi Animasi / PV8AeoZ4Sho) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-5 space-y-4">
                         <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-pink-400 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">3D Animation / Character</span>
@@ -155,15 +158,15 @@
                             Proyek eksplorasi animasi karakter 3D lengkap dari tahapan concept art, sculpting high-poly di ZBrush, hingga rigging dan rendering menggunakan Blender Cycles.
                         </p>
                         <div class="pt-2">
-                            <button onclick="openModal('videoModal', 'https://youtu.be/3s_x6oa49S8?si=CrJoSCYApqpf-sZ8')"
+                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/PV8AeoZ4Sho')"
                                 class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white font-semibold text-xs transition-all shadow-lg shadow-pink-600/30">
                                 <i class="fa-solid fa-play"></i> Watch Cinematic
                             </button>
                         </div>
                     </div>
 
-                    <div class="md:col-span-7 relative group rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl cursor-pointer" onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')">
-                        <img src="https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg" alt="Promosi Prodi Animasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="md:col-span-7 relative group rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl cursor-pointer" onclick="openModal('videoModal', 'https://www.youtube.com/embed/PV8AeoZ4Sho')">
+                        <img src="https://img.youtube.com/vi/PV8AeoZ4Sho/hqdefault.jpg" alt="Promosi Prodi Animasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
                             <div class="w-16 h-16 rounded-full bg-pink-600 text-white flex items-center justify-center shadow-lg shadow-pink-600/50 group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-play text-xl ml-1"></i>
@@ -172,37 +175,13 @@
                     </div>
                 </div>
 
-                <!-- ITEM 2: Mari Belajar Bahasa Isyarat SIBI (Thumbnail Interaktif Aman dari Blokir) -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
-                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl order-2 md:order-1 group cursor-pointer" onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')">
-                        <img src="https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg" alt="Mari Belajar Bahasa Isyarat SIBI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                            <div class="w-16 h-16 rounded-full bg-pink-600 text-white flex items-center justify-center shadow-lg shadow-pink-600/50 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-play text-xl ml-1"></i>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> Klik untuk Putar Video SIBI
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-5 space-y-4 order-1 md:order-2">
-                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 uppercase tracking-wider">Final Project Animation</span>
-                        <h3 class="text-2xl md:text-3xl font-bold text-white">Mari Belajar Bahasa Isyarat SIBI</h3>
-                        <p class="text-sm font-medium text-purple-300">Media Pembelajaran SLB</p>
-                        <p class="text-sm text-zinc-300 leading-relaxed">
-                            Video peragaan animasi 3D pembelajaran bahasa isyarat berstandar SIBI sebagai media edukasi interaktif bagi anak tunarungu wicara.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- ITEM 2.5: Slider YouTube Video (Thumbnail Interaktif) -->
+                <!-- ITEM 2 (YouTube Video Slider - Gambar Keempat Auto Berputar Live) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-5 flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30 uppercase tracking-wider">YouTube Video Slider</span>
-                                <span id="youtube-slider-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Video 1 / 5</span>
+                                <span id="youtube-slider-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Video 1 / 4</span>
                             </div>
                             <h3 id="youtube-slider-title" class="text-2xl md:text-3xl font-bold text-white">Mari Belajar Bahasa Isyarat SIBI</h3>
                             <p id="youtube-slider-category" class="text-xs font-semibold text-cyan-400">Media Pembelajaran SLB</p>
@@ -217,7 +196,7 @@
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
                                 </button>
-                                <span id="youtube-slider-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 5</span>
+                                <span id="youtube-slider-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 4</span>
                                 <button onclick="navigateYoutubeSlider(1)" 
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -226,15 +205,16 @@
                         </div>
                     </div>
 
-                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl group cursor-pointer" onclick="playCurrentSliderVideo()">
-                        <img id="youtube-slider-img" src="https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg" alt="YouTube Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                            <div class="w-16 h-16 rounded-full bg-pink-600 text-white flex items-center justify-center shadow-lg shadow-pink-600/50 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-play text-xl ml-1"></i>
-                            </div>
-                        </div>
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl">
+                        <iframe id="youtube-slider-iframe"
+                                title="YouTube Video Player" 
+                                class="w-full h-full rounded-xl"
+                                src="https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Klik untuk Putar Video Slider
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live Auto-Play Slider
                         </div>
                     </div>
                 </div>
@@ -921,45 +901,28 @@
                 id: 1,
                 title: "Mari Belajar Bahasa Isyarat SIBI",
                 category: "Media Pembelajaran SLB",
-                videoId: "yn8PCdjTusM",
-                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM",
-                thumbnailUrl: "https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg",
+                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM",
                 description: "Video peragaan animasi 3D pembelajaran bahasa isyarat berstandar SIBI sebagai media edukasi interaktif bagi anak tunarungu wicara."
             },
             {
                 id: 2,
                 title: "KAI (Kereta Api Indonesia)",
                 category: "Animasi Transportasi & Lingkungan",
-                videoId: "PV8AeoZ4Sho",
-                embedUrl: "https://www.youtube.com/embed/PV8AeoZ4Sho",
-                thumbnailUrl: "https://img.youtube.com/vi/PV8AeoZ4Sho/hqdefault.jpg",
+                embedUrl: "https://www.youtube.com/embed/PV8AeoZ4Sho?autoplay=1&mute=1&loop=1&playlist=PV8AeoZ4Sho",
                 description: "Simulasi 3D lingkungan kereta api dan fasilitas transportasi publik dengan detail tata letak sinematik."
             },
             {
                 id: 3,
                 title: "Komputer 3D Studio",
                 category: "Hard-Surface & Environment Showcase",
-                videoId: "HGdCVj-zeiM",
-                embedUrl: "https://www.youtube.com/embed/HGdCVj-zeiM",
-                thumbnailUrl: "https://img.youtube.com/vi/HGdCVj-zeiM/hqdefault.jpg",
+                embedUrl: "https://www.youtube.com/embed/HGdCVj-zeiM?autoplay=1&mute=1&loop=1&playlist=HGdCVj-zeiM",
                 description: "Showcase pemodelan perangkat keras komputer retro dan tata letak interior studio 3D."
             },
             {
                 id: 4,
-                title: "Podcast Animasi 3D",
-                category: "Cerita Nano Series",
-                videoId: "yn8PCdjTusM",
-                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM",
-                thumbnailUrl: "https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg",
-                description: "Seri dialog podcast animasi 3D interaktif bertema isu sosial dan cerita inspiratif."
-            },
-            {
-                id: 5,
                 title: "Kasus Kebakaran Hutan",
                 category: "Simulasi & Edukasi Isu Lingkungan",
-                videoId: "nN3DIAAtxQ4",
-                embedUrl: "https://www.youtube.com/embed/nN3DIAAtxQ4",
-                thumbnailUrl: "https://img.youtube.com/vi/nN3DIAAtxQ4/hqdefault.jpg",
+                embedUrl: "https://www.youtube.com/embed/nN3DIAAtxQ4?autoplay=1&mute=1&loop=1&playlist=nN3DIAAtxQ4",
                 description: "Video animasi studi kasus kebakaran hutan, dampak lingkungan, dan edukasi mitigasinya."
             }
         ];
@@ -976,14 +939,14 @@
             currentYoutubeSliderIndex = index;
             const data = youtubeSliderData[index];
 
-            const imgEl = document.getElementById('youtube-slider-img');
+            const iframe = document.getElementById('youtube-slider-iframe');
             const titleEl = document.getElementById('youtube-slider-title');
             const catEl = document.getElementById('youtube-slider-category');
             const descEl = document.getElementById('youtube-slider-desc');
             const badgeEl = document.getElementById('youtube-slider-badge');
             const indicatorEl = document.getElementById('youtube-slider-indicator');
 
-            if (imgEl) imgEl.src = data.thumbnailUrl;
+            if (iframe) iframe.src = data.embedUrl;
             if (titleEl) titleEl.innerText = data.title;
             if (catEl) catEl.innerText = data.category;
             if (descEl) descEl.innerText = data.description;
@@ -999,11 +962,6 @@
                 newIndex = 0;
             }
             loadYoutubeSlider(newIndex);
-        }
-
-        function playCurrentSliderVideo() {
-            const data = youtubeSliderData[currentYoutubeSliderIndex];
-            openModal('videoModal', data.embedUrl);
         }
 
         const sketchfabData = [
@@ -1109,7 +1067,7 @@
             if (modal && iframe && img) {
                 img.classList.add('hidden');
                 iframe.classList.remove('hidden');
-                iframe.src = videoUrl + "?autoplay=1";
+                iframe.src = videoUrl;
                 modal.classList.remove('hidden');
             }
         }
