@@ -493,13 +493,13 @@
             </div>
         </section>
 
-        <!-- AWARDS & CERTIFICATES SECTION (TERPERBAIKI & TAMPILAN LEBIH PROPORSI) -->
+        <!-- AWARDS & CERTIFICATES SECTION -->
         <section id="awards" class="py-20 bg-darkBg">
             <div class="max-w-7xl mx-auto px-6 space-y-12">
                 <div class="text-center max-w-2xl mx-auto space-y-3">
                     <span class="text-xs font-semibold text-pink-400 uppercase tracking-wider">Achievements & Awards</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white">Sertifikat Lomba & Penghargaan</h2>
-                    <p class="text-zinc-400 text-sm">Dokumentasi sertifikat magang industri dan kemenangan kompetisi animasi dan game tingkat nasional.</p>
+                    <p class="text-zinc-400 text-sm">Dokumentasi kemenangan kompetisi animasi dan game tingkat nasional.</p>
                 </div>
 
                 <!-- SLIDER SERTIFIKAT -->
@@ -509,12 +509,12 @@
                     <div class="md:col-span-5 flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <span id="cert-badge" class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-pink-400 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">
-                                Sertifikat 1 / 3
+                                Sertifikat 1 / 2
                             </span>
-                            <h3 id="cert-title" class="text-2xl md:text-3xl font-bold text-white">Sertifikat Magang IniDia Studio</h3>
-                            <p id="cert-category" class="text-xs font-semibold text-purple-300">3D Environment & Prop Modeler Intern</p>
+                            <h3 id="cert-title" class="text-2xl md:text-3xl font-bold text-white">Battle Field of Devata (BFOD) 2026</h3>
+                            <p id="cert-category" class="text-xs font-semibold text-purple-300">Favorite Artwork Winner</p>
                             <p id="cert-desc" class="text-zinc-300 text-sm leading-relaxed">
-                                Penyelesaian program magang industri selama 4 bulan di IniDia Studio Denpasar Bali sebagai 3D Modeler.
+                                Penghargaan sebagai Favorite Artwork Winner dalam ajang kompetisi Battle Field of Devata (BFOD) melalui pemungutan suara publik dan apresiasi komunitas.
                             </p>
                         </div>
 
@@ -524,7 +524,7 @@
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
                                 </button>
-                                <span id="cert-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 3</span>
+                                <span id="cert-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 2</span>
                                 <button onclick="navigateCertificate(1)" 
                                     class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
                                     Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -533,9 +533,9 @@
                         </div>
                     </div>
 
-                    <!-- Visual Sertifikat (Kanan - Tampilan Diperkecil & Utuh) -->
+                    <!-- Visual Sertifikat (Kanan) -->
                     <div class="md:col-span-7 relative rounded-2xl overflow-hidden bg-zinc-950 border border-purple-900/60 shadow-2xl group cursor-pointer flex items-center justify-center p-2 min-h-[250px] max-h-[380px]" onclick="openImageModal(currentCertImageSrc)">
-                        <img id="cert-image" src="https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f" alt="Sertifikat Magang IniDia" class="max-h-[340px] w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-500">
+                        <img id="cert-image" src="https://github.com/user-attachments/assets/67c29ad9-1e63-44b8-9d32-83fd075c45f6" alt="Sertifikat Lomba" class="max-h-[340px] w-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                             <span class="text-xs font-semibold text-white bg-black/80 px-4 py-2 rounded-xl border border-purple-800 shadow-xl">Klik untuk Perbesar Gambar</span>
                         </div>
@@ -820,20 +820,13 @@
         const certificateData = [
             {
                 id: 1,
-                title: "Sertifikat Magang IniDia Studio",
-                category: "3D Environment & Prop Modeler Intern",
-                src: "https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f",
-                description: "Penyelesaian program magang industri selama 4 bulan di IniDia Studio Denpasar Bali sebagai 3D Modeler."
-            },
-            {
-                id: 2,
                 title: "Battle Field of Devata (BFOD) 2026",
                 category: "Favorite Artwork Winner",
                 src: "https://github.com/user-attachments/assets/67c29ad9-1e63-44b8-9d32-83fd075c45f6",
                 description: "Penghargaan sebagai Favorite Artwork Winner dalam ajang kompetisi Battle Field of Devata (BFOD) melalui pemungutan suara publik dan apresiasi komunitas."
             },
             {
-                id: 3,
+                id: 2,
                 title: "Padang International Animation & Game Expo (PIAGEX) 2026",
                 category: "Favorite Winner - \"Rasa Leluhur di Dapur Gadang\"",
                 src: "https://github.com/user-attachments/assets/12eb161a-d4cc-483f-9e7b-f0cfb71e8c9a",
