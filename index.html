@@ -103,14 +103,11 @@
 
     <main class="mt-20">
         
-        <!-- HERO SECTION (Background Video Auto-play Live dengan link yn8PCdjTusM) -->
+        <!-- HERO SECTION -->
         <section id="home" class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-darkBg">
-            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-60 scale-125">
-                <iframe class="w-full h-full object-cover" 
-                    src="https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM&controls=0&showinfo=0" 
-                    frameborder="0" allow="autoplay; encrypted-media">
-                </iframe>
-                <div class="absolute inset-0 bg-darkBg/60"></div>
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
+                <div class="absolute -top-40 -left-40 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] animate-pulse"></div>
+                <div class="absolute top-1/2 -right-20 w-96 h-96 bg-pink-600 rounded-full mix-blend-multiply filter blur-[128px] animate-pulse"></div>
             </div>
 
             <div class="absolute inset-0 bg-radial from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
@@ -130,7 +127,7 @@
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-pink-600 to-purple-600 text-white font-bold hover:opacity-90 transition-all shadow-lg shadow-pink-600/30">
                         Jelajahi Karya <i class="fa-solid fa-arrow-down text-xs"></i>
                     </a>
-                    <button onclick="openModal('videoModal', 'https://youtu.be/yn8PCdjTusM?si=ljM_X1TROAwQHgS_')"
+                    <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-cardBg/90 text-purple-300 border border-purple-500/40 font-bold hover:bg-purple-950/60 transition-all backdrop-blur-md">
                         <i class="fa-solid fa-play text-pink-400"></i> Watch Cinematic Reel
                     </button>
@@ -158,24 +155,34 @@
                             Proyek eksplorasi animasi karakter 3D lengkap dari tahapan concept art, sculpting high-poly di ZBrush, hingga rigging dan rendering menggunakan Blender Cycles.
                         </p>
                         <div class="pt-2">
-                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/3s_x6oa49S8')"
+                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')"
                                 class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white font-semibold text-xs transition-all shadow-lg shadow-pink-600/30">
                                 <i class="fa-solid fa-play"></i> Watch Cinematic
                             </button>
                         </div>
                     </div>
 
-                    <div class="md:col-span-7 relative group rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl">
-                        <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/3s_x6oa49S8" allowfullscreen></iframe>
+                    <div class="md:col-span-7 relative group rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl cursor-pointer" onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')">
+                        <img src="https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg" alt="Promosi Prodi Animasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                            <div class="w-16 h-16 rounded-full bg-pink-600 text-white flex items-center justify-center shadow-lg shadow-pink-600/50 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-xl ml-1"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ITEM 2: Mari Belajar Bahasa Isyarat SIBI (Auto Live Play dengan link yn8PCdjTusM) -->
+                <!-- ITEM 2: Mari Belajar Bahasa Isyarat SIBI (Thumbnail Interaktif Aman dari Blokir) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
-                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl order-2 md:order-1">
-                        <iframe class="w-full h-full rounded-xl" src="https://youtu.be/yn8PCdjTusM?si=-ndGGoOi9QPTrbjt" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-xl order-2 md:order-1 group cursor-pointer" onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')">
+                        <img src="https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg" alt="Mari Belajar Bahasa Isyarat SIBI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                            <div class="w-16 h-16 rounded-full bg-pink-600 text-white flex items-center justify-center shadow-lg shadow-pink-600/50 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-xl ml-1"></i>
+                            </div>
+                        </div>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> Mari Belajar Bahasa Isyarat SIBI
+                            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> Klik untuk Putar Video SIBI
                         </div>
                     </div>
 
@@ -189,7 +196,7 @@
                     </div>
                 </div>
 
-                <!-- ITEM 2.5: Slider YouTube Video (Live & Berputar Otomatis dengan Mari Belajar SIBI sebagai default) -->
+                <!-- ITEM 2.5: Slider YouTube Video (Thumbnail Interaktif) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-5 flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
@@ -219,16 +226,15 @@
                         </div>
                     </div>
 
-                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl">
-                        <iframe id="youtube-slider-iframe"
-                                title="YouTube Video Player" 
-                                class="w-full h-full rounded-xl"
-                                src="https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl group cursor-pointer" onclick="playCurrentSliderVideo()">
+                        <img id="youtube-slider-img" src="https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg" alt="YouTube Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                            <div class="w-16 h-16 rounded-full bg-pink-600 text-white flex items-center justify-center shadow-lg shadow-pink-600/50 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play text-xl ml-1"></i>
+                            </div>
+                        </div>
                         <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live YouTube Showcase
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Klik untuk Putar Video Slider
                         </div>
                     </div>
                 </div>
@@ -915,35 +921,45 @@
                 id: 1,
                 title: "Mari Belajar Bahasa Isyarat SIBI",
                 category: "Media Pembelajaran SLB",
-                embedUrl: "https://youtu.be/yn8PCdjTusM?si=-ndGGoOi9QPTrbjt",
+                videoId: "yn8PCdjTusM",
+                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM",
+                thumbnailUrl: "https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg",
                 description: "Video peragaan animasi 3D pembelajaran bahasa isyarat berstandar SIBI sebagai media edukasi interaktif bagi anak tunarungu wicara."
             },
             {
                 id: 2,
                 title: "KAI (Kereta Api Indonesia)",
                 category: "Animasi Transportasi & Lingkungan",
-                embedUrl: "https://www.youtube.com/embed/PV8AeoZ4Sho?autoplay=1&mute=1&loop=1&playlist=PV8AeoZ4Sho",
+                videoId: "PV8AeoZ4Sho",
+                embedUrl: "https://www.youtube.com/embed/PV8AeoZ4Sho",
+                thumbnailUrl: "https://img.youtube.com/vi/PV8AeoZ4Sho/hqdefault.jpg",
                 description: "Simulasi 3D lingkungan kereta api dan fasilitas transportasi publik dengan detail tata letak sinematik."
             },
             {
                 id: 3,
                 title: "Komputer 3D Studio",
                 category: "Hard-Surface & Environment Showcase",
-                embedUrl: "https://www.youtube.com/embed/HGdCVj-zeiM?autoplay=1&mute=1&loop=1&playlist=HGdCVj-zeiM",
+                videoId: "HGdCVj-zeiM",
+                embedUrl: "https://www.youtube.com/embed/HGdCVj-zeiM",
+                thumbnailUrl: "https://img.youtube.com/vi/HGdCVj-zeiM/hqdefault.jpg",
                 description: "Showcase pemodelan perangkat keras komputer retro dan tata letak interior studio 3D."
             },
             {
                 id: 4,
                 title: "Podcast Animasi 3D",
                 category: "Cerita Nano Series",
-                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM",
+                videoId: "yn8PCdjTusM",
+                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM",
+                thumbnailUrl: "https://img.youtube.com/vi/yn8PCdjTusM/hqdefault.jpg",
                 description: "Seri dialog podcast animasi 3D interaktif bertema isu sosial dan cerita inspiratif."
             },
             {
                 id: 5,
                 title: "Kasus Kebakaran Hutan",
                 category: "Simulasi & Edukasi Isu Lingkungan",
-                embedUrl: "https://www.youtube.com/embed/nN3DIAAtxQ4?autoplay=1&mute=1&loop=1&playlist=nN3DIAAtxQ4",
+                videoId: "nN3DIAAtxQ4",
+                embedUrl: "https://www.youtube.com/embed/nN3DIAAtxQ4",
+                thumbnailUrl: "https://img.youtube.com/vi/nN3DIAAtxQ4/hqdefault.jpg",
                 description: "Video animasi studi kasus kebakaran hutan, dampak lingkungan, dan edukasi mitigasinya."
             }
         ];
@@ -960,14 +976,14 @@
             currentYoutubeSliderIndex = index;
             const data = youtubeSliderData[index];
 
-            const iframe = document.getElementById('youtube-slider-iframe');
+            const imgEl = document.getElementById('youtube-slider-img');
             const titleEl = document.getElementById('youtube-slider-title');
             const catEl = document.getElementById('youtube-slider-category');
             const descEl = document.getElementById('youtube-slider-desc');
             const badgeEl = document.getElementById('youtube-slider-badge');
             const indicatorEl = document.getElementById('youtube-slider-indicator');
 
-            if (iframe) iframe.src = data.embedUrl;
+            if (imgEl) imgEl.src = data.thumbnailUrl;
             if (titleEl) titleEl.innerText = data.title;
             if (catEl) catEl.innerText = data.category;
             if (descEl) descEl.innerText = data.description;
@@ -983,6 +999,11 @@
                 newIndex = 0;
             }
             loadYoutubeSlider(newIndex);
+        }
+
+        function playCurrentSliderVideo() {
+            const data = youtubeSliderData[currentYoutubeSliderIndex];
+            openModal('videoModal', data.embedUrl);
         }
 
         const sketchfabData = [
@@ -1088,8 +1109,8 @@
             if (modal && iframe && img) {
                 img.classList.add('hidden');
                 iframe.classList.remove('hidden');
-                iframe.src = videoUrl;
-                modal.classList.add('hidden');
+                iframe.src = videoUrl + "?autoplay=1";
+                modal.classList.remove('hidden');
             }
         }
 
@@ -1102,7 +1123,7 @@
                 iframe.src = '';
                 img.classList.remove('hidden');
                 img.src = imageSrc;
-                modal.classList.add('hidden');
+                modal.classList.remove('hidden');
             }
         }
 
