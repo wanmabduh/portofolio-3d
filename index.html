@@ -103,7 +103,7 @@
 
     <main class="mt-20">
         
-        <!-- HERO SECTION (Auto Berputar Video Bahasa Isyarat SIBI) -->
+        <!-- GAMBAR 1: HERO SECTION (Auto Berputar Video Bahasa Isyarat SIBI) -->
         <section id="home" class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-darkBg">
             <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-60 scale-125">
                 <iframe class="w-full h-full object-cover" 
@@ -132,7 +132,7 @@
                     </a>
                     <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-cardBg/90 text-purple-300 border border-purple-500/40 font-bold hover:bg-purple-950/60 transition-all backdrop-blur-md">
-                        <i class="fa-solid fa-play text-pink-400"></i> Watch Cinematic Reel
+                        <i class="fa-solid fa-play text-pink-400"></i> Watch SIBI Animation Reel
                     </button>
                 </div>
             </div>
@@ -148,7 +148,7 @@
 
             <div class="space-y-10">
                 
-                <!-- ITEM 1 (Gambar 2 Diubah Menjadi Prodi Animasi / PV8AeoZ4Sho) -->
+                <!-- GAMBAR 2: Promosi Prodi Animasi -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
                     <div class="md:col-span-5 space-y-4">
                         <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-pink-400 bg-pink-500/10 border border-pink-500/30 uppercase tracking-wider">3D Animation / Character</span>
@@ -175,46 +175,33 @@
                     </div>
                 </div>
 
-                <!-- ITEM 2 (YouTube Video Slider - Gambar Keempat Auto Berputar Live) -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-gradient-to-br from-cardBg via-[#1a0f35] to-purple-950/40 border border-purple-500/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
-                    <div class="md:col-span-5 flex flex-col justify-between space-y-6">
-                        <div class="space-y-4">
-                            <div class="flex items-center justify-between">
-                                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-purple-300 bg-purple-500/10 border border-purple-500/30 uppercase tracking-wider">YouTube Video Slider</span>
-                                <span id="youtube-slider-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-600 text-white">Video 1 / 4</span>
-                            </div>
-                            <h3 id="youtube-slider-title" class="text-2xl md:text-3xl font-bold text-white">Mari Belajar Bahasa Isyarat SIBI</h3>
-                            <p id="youtube-slider-category" class="text-xs font-semibold text-cyan-400">Media Pembelajaran SLB</p>
-                            <p id="youtube-slider-desc" class="text-zinc-300 text-sm leading-relaxed">
-                                Video peragaan animasi 3D pembelajaran bahasa isyarat berstandar SIBI sebagai media edukasi interaktif bagi anak tunarungu wicara.
-                            </p>
-                        </div>
-
-                        <div class="space-y-3 pt-4 border-t border-purple-900/60">
-                            <div class="flex items-center justify-between">
-                                <button onclick="navigateYoutubeSlider(-1)" 
-                                    class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
-                                    <i class="fa-solid fa-arrow-left text-[10px]"></i> Sebelumnya
-                                </button>
-                                <span id="youtube-slider-indicator" class="text-xs text-zinc-300 font-mono font-bold">1 dari 4</span>
-                                <button onclick="navigateYoutubeSlider(1)" 
-                                    class="px-4 py-2 bg-purple-950/60 border border-purple-800 hover:bg-pink-600 hover:border-pink-500 text-purple-200 hover:text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
-                                    Berikutnya <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl">
-                        <iframe id="youtube-slider-iframe"
-                                title="YouTube Video Player" 
+                <!-- GAMBAR 3: Mari Belajar Bahasa Isyarat SIBI (Auto Berputar Video) -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-cardBg border border-purple-900/50 rounded-3xl p-6 md:p-10 glow-card transition-all">
+                    <div class="md:col-span-7 relative rounded-2xl overflow-hidden aspect-video bg-zinc-900 border border-purple-900/60 shadow-2xl order-2 md:order-1">
+                        <iframe id="sibi-auto-player"
+                                title="Mari Belajar Bahasa Isyarat SIBI" 
                                 class="w-full h-full rounded-xl"
                                 src="https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowfullscreen>
                         </iframe>
-                        <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
-                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Live Auto-Play Slider
+                        <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-white border border-purple-900 flex items-center gap-1.5 pointer-events-none">
+                            <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span> Auto-Playing SIBI Video
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 flex flex-col justify-between space-y-4 order-1 md:order-2">
+                        <span class="inline-block w-fit px-3 py-1 rounded-full text-xs font-semibold text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 uppercase tracking-wider">Final Project Animation</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white">Mari Belajar Bahasa Isyarat SIBI</h3>
+                        <p class="text-xs font-semibold text-cyan-400">Media Pembelajaran SLB</p>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Video peragaan animasi 3D pembelajaran bahasa isyarat berstandar SIBI sebagai media edukasi interaktif bagi anak tunarungu wicara.
+                        </p>
+                        <div class="pt-2">
+                            <button onclick="openModal('videoModal', 'https://www.youtube.com/embed/yn8PCdjTusM')"
+                                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white font-semibold text-xs transition-all shadow-lg shadow-pink-600/30">
+                                <i class="fa-solid fa-play"></i> Putar Dengan Suara
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -720,11 +707,7 @@
 
                 <!-- FORM CONTACT WEB3FORMS -->
                 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 max-w-md mx-auto text-left">
-                    
-                    <!-- Access Key Web3Forms Anda -->
                     <input type="hidden" name="access_key" value="527ea74e-9090-4b42-9140-26c588823215">
-                    
-                    <!-- Subjek otomatis yang akan muncul di inbox email Anda -->
                     <input type="hidden" name="subject" value="Pesan Baru dari Portofolio Web 3D">
 
                     <div>
@@ -780,7 +763,6 @@
         window.addEventListener('DOMContentLoaded', () => {
             initThreeJsFooter('three-footer-canvas');
             initSketchfabGallery();
-            initYoutubeSlider();
             initCertificateSlider();
         });
 
@@ -894,74 +876,6 @@
                 newIndex = 0;
             }
             loadCertificate(newIndex);
-        }
-
-        const youtubeSliderData = [
-            {
-                id: 1,
-                title: "Mari Belajar Bahasa Isyarat SIBI",
-                category: "Media Pembelajaran SLB",
-                embedUrl: "https://www.youtube.com/embed/yn8PCdjTusM?autoplay=1&mute=1&loop=1&playlist=yn8PCdjTusM",
-                description: "Video peragaan animasi 3D pembelajaran bahasa isyarat berstandar SIBI sebagai media edukasi interaktif bagi anak tunarungu wicara."
-            },
-            {
-                id: 2,
-                title: "KAI (Kereta Api Indonesia)",
-                category: "Animasi Transportasi & Lingkungan",
-                embedUrl: "https://www.youtube.com/embed/PV8AeoZ4Sho?autoplay=1&mute=1&loop=1&playlist=PV8AeoZ4Sho",
-                description: "Simulasi 3D lingkungan kereta api dan fasilitas transportasi publik dengan detail tata letak sinematik."
-            },
-            {
-                id: 3,
-                title: "Komputer 3D Studio",
-                category: "Hard-Surface & Environment Showcase",
-                embedUrl: "https://www.youtube.com/embed/HGdCVj-zeiM?autoplay=1&mute=1&loop=1&playlist=HGdCVj-zeiM",
-                description: "Showcase pemodelan perangkat keras komputer retro dan tata letak interior studio 3D."
-            },
-            {
-                id: 4,
-                title: "Kasus Kebakaran Hutan",
-                category: "Simulasi & Edukasi Isu Lingkungan",
-                embedUrl: "https://www.youtube.com/embed/nN3DIAAtxQ4?autoplay=1&mute=1&loop=1&playlist=nN3DIAAtxQ4",
-                description: "Video animasi studi kasus kebakaran hutan, dampak lingkungan, dan edukasi mitigasinya."
-            }
-        ];
-
-        let currentYoutubeSliderIndex = 0;
-
-        function initYoutubeSlider() {
-            loadYoutubeSlider(0);
-        }
-
-        function loadYoutubeSlider(index) {
-            if (index < 0 || index >= youtubeSliderData.length) return;
-            
-            currentYoutubeSliderIndex = index;
-            const data = youtubeSliderData[index];
-
-            const iframe = document.getElementById('youtube-slider-iframe');
-            const titleEl = document.getElementById('youtube-slider-title');
-            const catEl = document.getElementById('youtube-slider-category');
-            const descEl = document.getElementById('youtube-slider-desc');
-            const badgeEl = document.getElementById('youtube-slider-badge');
-            const indicatorEl = document.getElementById('youtube-slider-indicator');
-
-            if (iframe) iframe.src = data.embedUrl;
-            if (titleEl) titleEl.innerText = data.title;
-            if (catEl) catEl.innerText = data.category;
-            if (descEl) descEl.innerText = data.description;
-            if (badgeEl) badgeEl.innerText = `Video ${index + 1} / ${youtubeSliderData.length}`;
-            if (indicatorEl) indicatorEl.innerText = `${index + 1} dari ${youtubeSliderData.length}`;
-        }
-
-        function navigateYoutubeSlider(direction) {
-            let newIndex = currentYoutubeSliderIndex + direction;
-            if (newIndex < 0) {
-                newIndex = youtubeSliderData.length - 1;
-            } else if (newIndex >= youtubeSliderData.length) {
-                newIndex = 0;
-            }
-            loadYoutubeSlider(newIndex);
         }
 
         const sketchfabData = [
@@ -1100,3 +1014,4 @@
     </script>
 </body>
 </html>
+```eof
