@@ -562,8 +562,9 @@
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
-                                    <div class="w-12 h-12 rounded-xl bg-white/10 border border-purple-900/60 flex items-center justify-center overflow-hidden p-1.5">
-                                        <img src="https://github.com/user-attachments/assets/01f2e003-ed7b-428f-a3df-649f4de386e9" alt="Politeknik Caltex Riau Logo" class="w-full h-full object-contain" style="filter: brightness(2.5) contrast(1.5);">
+                                    <!-- Container logo transparan tanpa background kotak -->
+                                    <div class="w-12 h-12 flex items-center justify-center overflow-hidden">
+                                        <img src="https://github.com/user-attachments/assets/01f2e003-ed7b-428f-a3df-649f4de386e9" alt="Politeknik Caltex Riau Logo" class="w-full h-full object-contain" style="mix-blend-mode: screen; filter: brightness(2.5) contrast(1.5);">
                                     </div>
                                     <div>
                                         <span class="px-3 py-1 bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-semibold rounded-full">Perguruan Tinggi</span>
@@ -584,8 +585,9 @@
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
-                                    <div class="w-12 h-12 rounded-xl bg-white/10 border border-purple-900/60 flex items-center justify-center overflow-hidden p-1">
-                                        <img src="https://github.com/user-attachments/assets/bd028875-5505-4582-9116-fb3d47868962" alt="SMK Negeri 7 Pekanbaru Logo" class="w-full h-full object-contain" style="mix-blend-mode: screen; filter: brightness(1.1) contrast(1.1);">
+                                    <!-- Container logo transparan tanpa background kotak -->
+                                    <div class="w-12 h-12 flex items-center justify-center overflow-hidden">
+                                        <img src="https://github.com/user-attachments/assets/bd028875-5505-4582-9116-fb3d47868962" alt="SMK Negeri 7 Pekanbaru Logo" class="w-full h-full object-contain" style="mix-blend-mode: screen; filter: brightness(1.2) contrast(1.2);">
                                     </div>
                                     <div>
                                         <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-semibold rounded-full">Sekolah Menengah Kejuruan</span>
@@ -1004,7 +1006,7 @@
                 iframe.src = '';
                 img.classList.remove('hidden');
                 img.src = imageSrc;
-                modal.classList.remove('hidden');
+                modal.classList.add('hidden');
             }
         }
 
