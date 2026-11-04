@@ -1,3 +1,5 @@
+<img width="889" height="281" alt="Politeknik_Caltex_Riau__1_-removebg-preview" src="https://github.com/user-attachments/assets/01f2e003-ed7b-428f-a3df-649f4de386e9" />
+<img width="390" height="512" alt="smk_7_pekanbaru-removebg-preview" src="https://github.com/user-attachments/assets/bd028875-5505-4582-9116-fb3d47868962" />
 <img width="1754" height="1241" alt="202609141445042255301193_dok_transkripaktifitas_page-0001" src="https://github.com/user-attachments/assets/12eb161a-d4cc-483f-9e7b-f0cfb71e8c9a" />
 <img width="2300" height="1725" alt="202609141438222255301193_dok_transkripaktifitas_page-0001" src="https://github.com/user-attachments/assets/67c29ad9-1e63-44b8-9d32-83fd075c45f6" />
 <img width="548" height="392" alt="inidia" src="https://github.com/user-attachments/assets/f27282d9-5099-40b1-b1e6-61e9aa57035f" />
