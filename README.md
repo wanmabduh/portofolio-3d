@@ -1,3 +1,9 @@
+<img width="1920" height="1080" alt="Ikan" src="https://github.com/user-attachments/assets/ee87c5b7-b074-4236-aafa-b3a461a41e58" />
+<img width="3000" height="3000" alt="car2" src="https://github.com/user-attachments/assets/3f5391dd-4d9e-44d8-b41d-7d08c809428c" />
+<img width="1920" height="1080" alt="Car" src="https://github.com/user-attachments/assets/a7d70230-6907-4da2-aa47-13607a213090" />
+<img width="1920" height="1080" alt="Busi" src="https://github.com/user-attachments/assets/0d9c59ff-d4f3-4c83-8f38-1f16c74a2555" />
+<img width="1920" height="1080" alt="barrelr" src="https://github.com/user-attachments/assets/bcdca935-fa09-4693-b298-a1788eb07fc4" />
+<img width="1920" height="1080" alt="smith" src="https://github.com/user-attachments/assets/a6b67907-3498-4af3-9097-e75f234e0e5f" />
 <img width="889" height="281" alt="Politeknik_Caltex_Riau__1_-removebg-preview" src="https://github.com/user-attachments/assets/01f2e003-ed7b-428f-a3df-649f4de386e9" />
 <img width="390" height="512" alt="smk_7_pekanbaru-removebg-preview" src="https://github.com/user-attachments/assets/bd028875-5505-4582-9116-fb3d47868962" />
 <img width="1754" height="1241" alt="202609141445042255301193_dok_transkripaktifitas_page-0001" src="https://github.com/user-attachments/assets/12eb161a-d4cc-483f-9e7b-f0cfb71e8c9a" />
