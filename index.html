@@ -267,7 +267,7 @@
             <div class="max-w-7xl mx-auto px-6 space-y-4 text-center">
                 <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Visual Gallery</span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white">Galeri Portofolio Aset 3D</h2>
-                <p class="text-zinc-400 text-sm max-w-xl mx-auto">Koleksi tangkapan layar render aset pemodelan 3D yang dikelompokkan ke dalam kategori objek tunggal dan adegan latar.</p>
+                <p class="text-zinc-400 text-sm max-w-xl mx-auto">Koleksi tangkapan layar render aset pemodelan 3D yang dikelompokkan ke dalam kategori objek tunggal, adegan latar, dan studi latihan.</p>
             </div>
 
             <!-- KELOMPOK 1 -->
@@ -491,6 +491,100 @@
                     </div>
                 </div>
             </div>
+
+            <!-- KELOMPOK 3: 3D STUDY WORK -->
+            <div class="max-w-7xl mx-auto px-6 space-y-6 pt-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-purple-900/60 pb-4 gap-4">
+                    <div class="space-y-1.5">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-purple-400"></span>
+                            <h3 class="text-xl font-bold text-white">3D Study Work</h3>
+                        </div>
+                        <p class="text-xs md:text-sm text-zinc-300">
+                            3D Study Work — Dibuat untuk latihan eksplorasi teknik modeling dan texturing berdasarkan berbagai referensi konsep visual.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between md:justify-end gap-3 flex-shrink-0">
+                        <span class="text-xs font-semibold text-purple-300 bg-purple-950/60 border border-purple-800 px-3 py-1 rounded-full">Exploration & Study</span>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="slideGallery('gallerySlider3', 'left')" class="w-10 h-10 rounded-xl bg-cardBg border border-purple-900 text-purple-300 flex items-center justify-center hover:bg-pink-600 hover:text-white hover:border-pink-500 transition-all shadow-md">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="slideGallery('gallerySlider3', 'right')" class="w-10 h-10 rounded-xl bg-cardBg border border-purple-900 text-purple-300 flex items-center justify-center hover:bg-pink-600 hover:text-white hover:border-pink-500 transition-all shadow-md">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallerySlider3" class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-4">
+                    <!-- Barrelr -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="GANTI_DENGAN_URL_GAMBAR_BARRELR" alt="Stylized Barrel" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Stylized Barrel</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Latihan pemodelan prop kayu & besi stylized.</p>
+                        </div>
+                    </div>
+
+                    <!-- Busi -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="GANTI_DENGAN_URL_GAMBAR_BUSI" alt="Busi (Spark Plug)" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Busi (Spark Plug)</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Eksplorasi hard-surface komponen mekanik.</p>
+                        </div>
+                    </div>
+
+                    <!-- Car -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="GANTI_DENGAN_URL_GAMBAR_CAR" alt="Stylized Green Car" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Stylized Sport Car</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Latihan modeling kendaraan bergaya stylized.</p>
+                        </div>
+                    </div>
+
+                    <!-- Car 2 -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="GANTI_DENGAN_URL_GAMBAR_CAR2" alt="Classic Sedan Car" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Classic Sedan</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Eksplorasi proporsi dan topologi mobil klasik.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ikan -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="GANTI_DENGAN_URL_GAMBAR_IKAN" alt="Stylized Fish" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Stylized Fish</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Latihan sculpting & texturing karakter organik.</p>
+                        </div>
+                    </div>
+
+                    <!-- Smith -->
+                    <div class="w-[260px] md:w-[280px] snap-start bg-cardBg border border-purple-900/60 rounded-2xl overflow-hidden group glow-card transition-all flex-shrink-0 flex flex-col justify-between">
+                        <div class="h-48 overflow-hidden relative bg-zinc-950 flex items-center justify-center p-3">
+                            <img src="GANTI_DENGAN_URL_GAMBAR_SMITH" alt="Blacksmith House Diorama" class="w-full h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 space-y-1 border-t border-purple-900/30">
+                            <h4 class="text-sm font-bold text-white truncate">Blacksmith Diorama</h4>
+                            <p class="text-[11px] text-zinc-400 truncate">Latihan environment bangunan isometric stylized.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- AWARDS & CERTIFICATES SECTION -->
@@ -562,7 +656,6 @@
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
-                                    <!-- Container logo transparan tanpa background kotak -->
                                     <div class="w-12 h-12 flex items-center justify-center overflow-hidden">
                                         <img src="https://github.com/user-attachments/assets/01f2e003-ed7b-428f-a3df-649f4de386e9" alt="Politeknik Caltex Riau Logo" class="w-full h-full object-contain" style="mix-blend-mode: screen; filter: brightness(2.5) contrast(1.5);">
                                     </div>
@@ -585,7 +678,6 @@
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
-                                    <!-- Container logo transparan tanpa background kotak -->
                                     <div class="w-12 h-12 flex items-center justify-center overflow-hidden">
                                         <img src="https://github.com/user-attachments/assets/bd028875-5505-4582-9116-fb3d47868962" alt="SMK Negeri 7 Pekanbaru Logo" class="w-full h-full object-contain" style="mix-blend-mode: screen; filter: brightness(1.2) contrast(1.2);">
                                     </div>
@@ -993,7 +1085,7 @@
                 img.classList.add('hidden');
                 iframe.classList.remove('hidden');
                 iframe.src = videoUrl;
-                modal.classList.add('hidden');
+                modal.classList.remove('hidden');
             }
         }
 
@@ -1006,7 +1098,7 @@
                 iframe.src = '';
                 img.classList.remove('hidden');
                 img.src = imageSrc;
-                modal.classList.add('hidden');
+                modal.classList.remove('hidden');
             }
         }
 
